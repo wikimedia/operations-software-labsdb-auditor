@@ -1,0 +1,2167 @@
+abuse_filter:
+  af_actions:
+    whitelisted: true
+  af_comments:
+    whitelisted: false
+    condition: "af_hidden != NULL"
+    replacewith: null 
+  af_deleted:
+    whitelisted: true
+  af_enabled:
+    whitelisted: true
+  af_global:
+    whitelisted: true
+  af_group:
+    whitelisted: true
+  af_hidden:
+    whitelisted: true
+  af_hit_count:
+    whitelisted: true
+  af_id:
+    whitelisted: true
+  af_pattern:
+    whitelisted: false
+    condition: "af_hidden != NULL"
+    replacewith: null 
+  af_public_comments:
+    whitelisted: true
+  af_throttled:
+    whitelisted: true
+  af_timestamp:
+    whitelisted: true
+  af_user:
+    whitelisted: true
+  af_user_text:
+    whitelisted: true
+abuse_filter_action:
+  afa_consequence:
+    whitelisted: true
+  afa_filter:
+    whitelisted: true
+  afa_parameters:
+    whitelisted: true
+abuse_filter_history:
+  afh_actions:
+    whitelisted: true
+  afh_changed_fields:
+    whitelisted: true
+  afh_comments:
+    whitelisted: true
+  afh_deleted:
+    whitelisted: true
+  afh_filter:
+    whitelisted: true
+  afh_flags:
+    whitelisted: true
+  afh_group:
+    whitelisted: true
+  afh_id:
+    whitelisted: true
+  afh_pattern:
+    whitelisted: true
+  afh_public_comments:
+    whitelisted: true
+  afh_timestamp:
+    whitelisted: true
+  afh_user:
+    whitelisted: true
+  afh_user_text:
+    whitelisted: true
+abuse_filter_log:
+  afl_action:
+    whitelisted: true
+  afl_actions:
+    whitelisted: true
+  afl_deleted:
+    whitelisted: true
+  afl_filter:
+    whitelisted: true
+  afl_id:
+    whitelisted: true
+  afl_ip:
+    whitelisted: false
+    replacewith: null
+  afl_log_id:
+    whitelisted: true
+  afl_namespace:
+    whitelisted: true
+  afl_patrolled_by:
+    whitelisted: true
+  afl_rev_id:
+    whitelisted: true
+  afl_timestamp:
+    whitelisted: true
+  afl_title:
+    whitelisted: true
+  afl_user:
+    whitelisted: true
+  afl_user_text:
+    whitelisted: true
+  afl_var_dump:
+    whitelisted: true
+  afl_wiki:
+    whitelisted: true
+aft_article_answer:
+  aa_feedback_id:
+    whitelisted: true
+  aa_field_id:
+    whitelisted: true
+  aa_response_boolean:
+    whitelisted: true
+  aa_response_option_id:
+    whitelisted: true
+  aa_response_rating:
+    whitelisted: true
+  aa_response_text:
+    whitelisted: true
+  aat_id:
+    whitelisted: true
+aft_article_answer_text:
+  aat_id:
+    whitelisted: true
+  aat_response_text:
+    whitelisted: true
+aft_article_feedback:
+  af_abuse_count:
+    whitelisted: true
+  af_activity_count:
+    whitelisted: true
+  af_bucket_id:
+    whitelisted: true
+  af_created:
+    whitelisted: true
+  af_cta_id:
+    whitelisted: true
+  af_experiment:
+    whitelisted: true
+  af_form_id:
+    whitelisted: true
+  af_has_comment:
+    whitelisted: true
+  af_helpful_count:
+    whitelisted: true
+  af_id:
+    whitelisted: true
+  af_is_autohide:
+    whitelisted: true
+  af_is_declined:
+    whitelisted: true
+  af_is_deleted:
+    whitelisted: true
+  af_is_featured:
+    whitelisted: true
+  af_is_hidden:
+    whitelisted: true
+  af_is_resolved:
+    whitelisted: true
+  af_is_undeleted:
+    whitelisted: true
+  af_is_unfeatured:
+    whitelisted: true
+  af_is_unhidden:
+    whitelisted: true
+  af_is_unrequested:
+    whitelisted: true
+  af_is_unresolved:
+    whitelisted: true
+  af_last_status:
+    whitelisted: true
+  af_last_status_notes:
+    whitelisted: true
+  af_last_status_timestamp:
+    whitelisted: true
+  af_last_status_user_id:
+    whitelisted: true
+  af_link_id:
+    whitelisted: true
+  af_net_helpfulness:
+    whitelisted: true
+  af_oversight_count:
+    whitelisted: true
+  af_page_id:
+    whitelisted: true
+  af_relevance_score:
+    whitelisted: true
+  af_relevance_sort:
+    whitelisted: true
+  af_revision_id:
+    whitelisted: true
+  af_suppress_count:
+    whitelisted: true
+  af_unhelpful_count:
+    whitelisted: true
+  af_user_anon_token:
+    whitelisted: true
+  af_user_id:
+    whitelisted: true
+  af_user_ip:
+    whitelisted: false
+    replacewith: null
+aft_article_feedback_properties:
+  afp_feedback_id:
+    whitelisted: true
+  afp_key:
+    whitelisted: true
+  afp_value_int:
+    whitelisted: true
+  afp_value_text:
+    whitelisted: true
+aft_article_feedback_ratings_rollup:
+  arr_count:
+    whitelisted: true
+  arr_field_id:
+    whitelisted: true
+  arr_page_id:
+    whitelisted: true
+  arr_total:
+    whitelisted: true
+aft_article_feedback_select_rollup:
+  afsr_count:
+    whitelisted: true
+  afsr_field_id:
+    whitelisted: true
+  afsr_option_id:
+    whitelisted: true
+  afsr_page_id:
+    whitelisted: true
+  afsr_total:
+    whitelisted: true
+aft_article_field:
+  afi_bucket_id:
+    whitelisted: true
+  afi_data_type:
+    whitelisted: true
+  afi_group_id:
+    whitelisted: true
+  afi_id:
+    whitelisted: true
+  afi_name:
+    whitelisted: true
+aft_article_field_group:
+  afg_id:
+    whitelisted: true
+  afg_name:
+    whitelisted: true
+aft_article_field_option:
+  afo_field_id:
+    whitelisted: true
+  afo_name:
+    whitelisted: true
+  afo_option_id:
+    whitelisted: true
+aft_article_filter_count:
+  afc_filter_count:
+    whitelisted: true
+  afc_filter_name:
+    whitelisted: true
+  afc_page_id:
+    whitelisted: true
+aft_article_revision_feedback_ratings_rollup:
+  afrr_count:
+    whitelisted: true
+  afrr_field_id:
+    whitelisted: true
+  afrr_page_id:
+    whitelisted: true
+  afrr_revision_id:
+    whitelisted: true
+  afrr_total:
+    whitelisted: true
+aft_article_revision_feedback_select_rollup:
+  arfsr_count:
+    whitelisted: true
+  arfsr_field_id:
+    whitelisted: true
+  arfsr_option_id:
+    whitelisted: true
+  arfsr_page_id:
+    whitelisted: true
+  arfsr_revision_id:
+    whitelisted: true
+  arfsr_total:
+    whitelisted: true
+archive:
+  ar_comment:
+    whitelisted: false
+    replacewith: null
+  ar_deleted:
+    whitelisted: true
+  ar_flags:
+    whitelisted: true
+  ar_id:
+    whitelisted: true
+  ar_len:
+    whitelisted: false
+    condition: ar_deleted & 1
+    replacewith: null
+  ar_minor_edit:
+    whitelisted: true
+  ar_namespace:
+    whitelisted: true
+  ar_page_id:
+    whitelisted: true
+  ar_parent_id:
+    whitelisted: true
+  ar_rev_id:
+    whitelisted: true
+  ar_sha1:
+    whitelisted: false
+    condition: ar_deleted & 1
+    replacewith: null
+  ar_text:
+    whitelisted: false
+    replacewith: null
+  ar_text_id:
+    whitelisted: false
+    condition: ar_deleted & 1
+    replacewith: null
+  ar_timestamp:
+    whitelisted: true
+  ar_title:
+    whitelisted: true
+  ar_user:
+    whitelisted: false
+    condition: ar_deleted & 4
+    replacewith: null
+  ar_user_text:
+    whitelisted: false
+    condition: ar_deleted & 4
+    replacewith: null
+archive_userindex:
+  __where__: ar_deleted & 4 = 0
+  ar_comment:
+    whitelisted: false
+    replacewith: null
+  ar_deleted:
+    whitelisted: true
+  ar_flags:
+    whitelisted: true
+  ar_id:
+    whitelisted: true
+  ar_len:
+    whitelisted: false
+    condition: ar_deleted & 1
+    replacewith: null
+  ar_minor_edit:
+    whitelisted: true
+  ar_namespace:
+    whitelisted: true
+  ar_page_id:
+    whitelisted: true
+  ar_parent_id:
+    whitelisted: true
+  ar_rev_id:
+    whitelisted: true
+  ar_sha1:
+    whitelisted: false
+    condition: ar_deleted & 1
+    replacewith: null
+  ar_text:
+    whitelisted: false
+    replacewith: null
+  ar_text_id:
+    whitelisted: false
+    condition: ar_deleted & 1
+    replacewith: null
+  ar_timestamp:
+    whitelisted: true
+  ar_title:
+    whitelisted: true
+  ar_user:
+    whitelisted: false
+    condition: ar_deleted & 4
+    replacewith: null
+  ar_user_text:
+    whitelisted: false
+    condition: ar_deleted & 4
+    replacewith: null
+article_assessment:
+  aa_page_id:
+    whitelisted: true
+  aa_rating_id:
+    whitelisted: true
+  aa_rating_value:
+    whitelisted: true
+  aa_revision:
+    whitelisted: true
+  aa_timestamp:
+    whitelisted: true
+  aa_user_anon_token:
+    whitelisted: true
+  aa_user_id:
+    whitelisted: true
+  aa_user_text:
+    whitelisted: true
+article_assessment_pages:
+  aap_count:
+    whitelisted: true
+  aap_page_id:
+    whitelisted: true
+  aap_rating_id:
+    whitelisted: true
+  aap_total:
+    whitelisted: true
+article_assessment_ratings:
+  aar_id:
+    whitelisted: true
+  aar_rating:
+    whitelisted: true
+article_feedback:
+  aa_design_bucket:
+    whitelisted: true
+  aa_page_id:
+    whitelisted: true
+  aa_rating_id:
+    whitelisted: true
+  aa_rating_value:
+    whitelisted: true
+  aa_revision:
+    whitelisted: true
+  aa_timestamp:
+    whitelisted: true
+  aa_user_anon_token:
+    whitelisted: true
+  aa_user_id:
+    whitelisted: true
+  aa_user_text:
+    whitelisted: true
+article_feedback_pages:
+  aap_count:
+    whitelisted: true
+  aap_page_id:
+    whitelisted: true
+  aap_rating_id:
+    whitelisted: true
+  aap_total:
+    whitelisted: true
+article_feedback_properties:
+  afp_key:
+    whitelisted: true
+  afp_revision:
+    whitelisted: true
+  afp_user_anon_token:
+    whitelisted: true
+  afp_user_text:
+    whitelisted: true
+  afp_value:
+    whitelisted: true
+  afp_value_text:
+    whitelisted: true
+article_feedback_ratings:
+  aar_id:
+    whitelisted: true
+  aar_rating:
+    whitelisted: true
+article_feedback_revisions:
+  afr_count:
+    whitelisted: true
+  afr_page_id:
+    whitelisted: true
+  afr_rating_id:
+    whitelisted: true
+  afr_revision:
+    whitelisted: true
+  afr_total:
+    whitelisted: true
+article_feedback_stats:
+  afs_data:
+    whitelisted: true
+  afs_orderable_data:
+    whitelisted: true
+  afs_page_id:
+    whitelisted: true
+  afs_stats_type_id:
+    whitelisted: true
+  afs_ts:
+    whitelisted: true
+article_feedback_stats_types:
+  afst_id:
+    whitelisted: true
+  afst_type:
+    whitelisted: true
+category:
+  cat_files:
+    whitelisted: true
+  cat_id:
+    whitelisted: true
+  cat_pages:
+    whitelisted: true
+  cat_subcats:
+    whitelisted: true
+  cat_title:
+    whitelisted: true
+categorylinks:
+  cl_collation:
+    whitelisted: true
+  cl_from:
+    whitelisted: true
+  cl_sortkey:
+    whitelisted: true
+  cl_sortkey_prefix:
+    whitelisted: true
+  cl_timestamp:
+    whitelisted: true
+  cl_to:
+    whitelisted: true
+  cl_type:
+    whitelisted: true
+change_tag:
+  ct_log_id:
+    whitelisted: true
+  ct_params:
+    whitelisted: true
+  ct_rc_id:
+    whitelisted: true
+  ct_rev_id:
+    whitelisted: true
+  ct_tag:
+    whitelisted: true
+ep_articles:
+  article_course_id:
+    whitelisted: true
+  article_id:
+    whitelisted: true
+  article_page_id:
+    whitelisted: true
+  article_page_title:
+    whitelisted: true
+  article_reviewers:
+    whitelisted: true
+  article_user_id:
+    whitelisted: true
+ep_cas:
+  ca_bio:
+    whitelisted: true
+  ca_id:
+    whitelisted: true
+  ca_photo:
+    whitelisted: true
+  ca_user_id:
+    whitelisted: true
+  ca_visible:
+    whitelisted: true
+ep_courses:
+  course_ca_count:
+    whitelisted: true
+  course_campus_ambs:
+    whitelisted: true
+  course_description:
+    whitelisted: true
+  course_end:
+    whitelisted: true
+  course_field:
+    whitelisted: true
+  course_id:
+    whitelisted: true
+  course_instructor_count:
+    whitelisted: true
+  course_instructors:
+    whitelisted: true
+  course_lang:
+    whitelisted: true
+  course_level:
+    whitelisted: true
+  course_name:
+    whitelisted: true
+  course_oa_count:
+    whitelisted: true
+  course_online_ambs:
+    whitelisted: true
+  course_org_id:
+    whitelisted: true
+  course_start:
+    whitelisted: true
+  course_student_count:
+    whitelisted: true
+  course_students:
+    whitelisted: true
+  course_term:
+    whitelisted: true
+  course_title:
+    whitelisted: true
+  course_token:
+    whitelisted: true
+  course_touched:
+    whitelisted: true
+ep_events:
+  event_course_id:
+    whitelisted: true
+  event_id:
+    whitelisted: true
+  event_info:
+    whitelisted: true
+  event_time:
+    whitelisted: true
+  event_type:
+    whitelisted: true
+  event_user_id:
+    whitelisted: true
+ep_instructors:
+  instructor_id:
+    whitelisted: true
+  instructor_user_id:
+    whitelisted: true
+ep_oas:
+  oa_bio:
+    whitelisted: true
+  oa_id:
+    whitelisted: true
+  oa_photo:
+    whitelisted: true
+  oa_user_id:
+    whitelisted: true
+  oa_visible:
+    whitelisted: true
+ep_orgs:
+  org_active:
+    whitelisted: true
+  org_ca_count:
+    whitelisted: true
+  org_city:
+    whitelisted: true
+  org_country:
+    whitelisted: true
+  org_course_count:
+    whitelisted: true
+  org_courses:
+    whitelisted: true
+  org_id:
+    whitelisted: true
+  org_instructor_count:
+    whitelisted: true
+  org_last_active_date:
+    whitelisted: true
+  org_name:
+    whitelisted: true
+  org_oa_count:
+    whitelisted: true
+  org_student_count:
+    whitelisted: true
+  org_touched:
+    whitelisted: true
+ep_revisions:
+  rev_comment:
+    whitelisted: true
+  rev_data:
+    whitelisted: true
+  rev_deleted:
+    whitelisted: true
+  rev_id:
+    whitelisted: true
+  rev_minor_edit:
+    whitelisted: true
+  rev_object_id:
+    whitelisted: true
+  rev_object_identifier:
+    whitelisted: true
+  rev_time:
+    whitelisted: true
+  rev_type:
+    whitelisted: true
+  rev_user_id:
+    whitelisted: true
+  rev_user_text:
+    whitelisted: true
+ep_students:
+  student_active_enroll:
+    whitelisted: true
+  student_first_course:
+    whitelisted: true
+  student_first_enroll:
+    whitelisted: true
+  student_id:
+    whitelisted: true
+  student_last_active:
+    whitelisted: true
+  student_last_course:
+    whitelisted: true
+  student_last_enroll:
+    whitelisted: true
+  student_user_id:
+    whitelisted: true
+ep_users_per_course:
+  upc_course_id:
+    whitelisted: true
+  upc_role:
+    whitelisted: true
+  upc_time:
+    whitelisted: true
+  upc_user_id:
+    whitelisted: true
+externallinks:
+  el_from:
+    whitelisted: true
+  el_id:
+    whitelisted: true
+  el_index:
+    whitelisted: true
+  el_to:
+    whitelisted: true
+filearchive:
+  fa_archive_name:
+    whitelisted: true
+  fa_bits:
+    whitelisted: false
+    condition: fa_deleted & 1
+    replacewith: null
+  fa_deleted:
+    whitelisted: true
+  fa_deleted_reason:
+    whitelisted: true
+  fa_deleted_timestamp:
+    whitelisted: true
+  fa_deleted_user:
+    whitelisted: true
+  fa_description:
+    whitelisted: false
+    condition: fa_deleted & 2
+    replacewith: null
+  fa_height:
+    whitelisted: false
+    condition: fa_deleted & 1
+    replacewith: null
+  fa_id:
+    whitelisted: true
+  fa_major_mime:
+    whitelisted: false
+    condition: fa_deleted & 1
+    replacewith: null
+  fa_media_type:
+    whitelisted: false
+    condition: fa_deleted & 1
+    replacewith: null
+  fa_metadata:
+    whitelisted: false
+    condition: fa_deleted & 1
+    replacewith: null
+  fa_minor_mime:
+    whitelisted: true
+  fa_name:
+    whitelisted: false
+    condition: fa_deleted & 1
+    replacewith: null
+  fa_sha1:
+    whitelisted: false
+    condition: fa_deleted & 1
+    replacewith: null
+  fa_size:
+    whitelisted: false
+    condition: fa_deleted & 1
+    replacewith: null
+  fa_storage_group:
+    whitelisted: true
+  fa_storage_key:
+    whitelisted: false
+    replacewith: null
+  fa_timestamp:
+    whitelisted: true
+  fa_user:
+    whitelisted: false
+    condition: fa_deleted & 4
+    replacewith: null
+  fa_user_text:
+    whitelisted: false
+    condition: fa_deleted & 4
+    replacewith: null
+  fa_width:
+    whitelisted: false
+    condition: fa_deleted & 1
+    replacewith: null
+filearchive_userindex:
+  __where__: fa_deleted & 4 = 0
+  fa_archive_name:
+    whitelisted: true
+  fa_bits:
+    whitelisted: false
+    condition: fa_deleted & 1
+    replacewith: null
+  fa_deleted:
+    whitelisted: true
+  fa_deleted_reason:
+    whitelisted: true
+  fa_deleted_timestamp:
+    whitelisted: true
+  fa_deleted_user:
+    whitelisted: true
+  fa_description:
+    whitelisted: false
+    condition: fa_deleted & 2
+    replacewith: null
+  fa_height:
+    whitelisted: false
+    condition: fa_deleted & 1
+    replacewith: null
+  fa_id:
+    whitelisted: true
+  fa_major_mime:
+    whitelisted: false
+    condition: fa_deleted & 1
+    replacewith: null
+  fa_media_type:
+    whitelisted: false
+    condition: fa_deleted & 1
+    replacewith: null
+  fa_metadata:
+    whitelisted: false
+    condition: fa_deleted & 1
+    replacewith: null
+  fa_minor_mime:
+    whitelisted: true
+  fa_name:
+    whitelisted: false
+    condition: fa_deleted & 1
+    replacewith: null
+  fa_sha1:
+    whitelisted: false
+    condition: fa_deleted & 1
+    replacewith: null
+  fa_size:
+    whitelisted: false
+    condition: fa_deleted & 1
+    replacewith: null
+  fa_storage_group:
+    whitelisted: true
+  fa_storage_key:
+    whitelisted: false
+    replacewith: null
+  fa_timestamp:
+    whitelisted: true
+  fa_user:
+    whitelisted: false
+    condition: fa_deleted & 4
+    replacewith: null
+  fa_user_text:
+    whitelisted: false
+    condition: fa_deleted & 4
+    replacewith: null
+  fa_width:
+    whitelisted: false
+    condition: fa_deleted & 1
+    replacewith: null
+flaggedimages:
+  fi_img_sha1:
+    whitelisted: true
+  fi_img_timestamp:
+    whitelisted: true
+  fi_name:
+    whitelisted: true
+  fi_rev_id:
+    whitelisted: true
+flaggedpage_config:
+  fpc_expiry:
+    whitelisted: true
+  fpc_level:
+    whitelisted: true
+  fpc_override:
+    whitelisted: true
+  fpc_page_id:
+    whitelisted: true
+  fpc_select:
+    whitelisted: true
+flaggedpage_pending:
+  fpp_page_id:
+    whitelisted: true
+  fpp_pending_since:
+    whitelisted: true
+  fpp_quality:
+    whitelisted: true
+  fpp_rev_id:
+    whitelisted: true
+flaggedpages:
+  fp_page_id:
+    whitelisted: true
+  fp_pending_since:
+    whitelisted: true
+  fp_quality:
+    whitelisted: true
+  fp_reviewed:
+    whitelisted: true
+  fp_stable:
+    whitelisted: true
+flaggedrevs:
+  fr_comment:
+    whitelisted: true
+  fr_flags:
+    whitelisted: true
+  fr_img_name:
+    whitelisted: true
+  fr_img_sha1:
+    whitelisted: true
+  fr_img_timestamp:
+    whitelisted: true
+  fr_page_id:
+    whitelisted: true
+  fr_quality:
+    whitelisted: true
+  fr_rev_id:
+    whitelisted: true
+  fr_rev_timestamp:
+    whitelisted: true
+  fr_tags:
+    whitelisted: true
+  fr_text:
+    whitelisted: true
+  fr_timestamp:
+    whitelisted: true
+  fr_user:
+    whitelisted: true
+flaggedrevs_promote:
+  frp_user_id:
+    whitelisted: true
+  frp_user_params:
+    whitelisted: true
+flaggedrevs_statistics:
+  frs_stat_key:
+    whitelisted: true
+  frs_stat_val:
+    whitelisted: true
+  frs_timestamp:
+    whitelisted: true
+flaggedrevs_stats:
+  namespace:
+    whitelisted: true
+  reviewed:
+    whitelisted: true
+  synced:
+    whitelisted: true
+  total:
+    whitelisted: true
+flaggedrevs_stats2:
+  ave_pending_time:
+    whitelisted: true
+  ave_review_time:
+    whitelisted: true
+  med_review_time:
+    whitelisted: true
+  stat_id:
+    whitelisted: true
+flaggedrevs_tracking:
+  ftr_from:
+    whitelisted: true
+  ftr_namespace:
+    whitelisted: true
+  ftr_title:
+    whitelisted: true
+flaggedtemplates:
+  ft_namespace:
+    whitelisted: true
+  ft_rev_id:
+    whitelisted: true
+  ft_title:
+    whitelisted: true
+  ft_tmp_rev_id:
+    whitelisted: true
+geo_tags:
+  gt_country:
+    whitelisted: true
+  gt_dim:
+    whitelisted: true
+  gt_globe:
+    whitelisted: true
+  gt_id:
+    whitelisted: true
+  gt_lat:
+    whitelisted: true
+  gt_lon:
+    whitelisted: true
+  gt_name:
+    whitelisted: true
+  gt_page_id:
+    whitelisted: true
+  gt_primary:
+    whitelisted: true
+  gt_region:
+    whitelisted: true
+  gt_type:
+    whitelisted: true
+global_block_whitelist:
+  gbw_address:
+    whitelisted: true
+  gbw_by:
+    whitelisted: true
+  gbw_by_text:
+    whitelisted: true
+  gbw_expiry:
+    whitelisted: true
+  gbw_id:
+    whitelisted: true
+  gbw_reason:
+    whitelisted: true
+globalblocks:
+  gb_address:
+    whitelisted: true
+  gb_anon_only:
+    whitelisted: true
+  gb_by:
+    whitelisted: true
+  gb_by_wiki:
+    whitelisted: true
+  gb_expiry:
+    whitelisted: true
+  gb_id:
+    whitelisted: true
+  gb_range_end:
+    whitelisted: true
+  gb_range_start:
+    whitelisted: true
+  gb_reason:
+    whitelisted: true
+  gb_timestamp:
+    whitelisted: true
+globalimagelinks:
+  gil_page:
+    whitelisted: true
+  gil_page_namespace:
+    whitelisted: true
+  gil_page_namespace_id:
+    whitelisted: true
+  gil_page_title:
+    whitelisted: true
+  gil_to:
+    whitelisted: true
+  gil_wiki:
+    whitelisted: true
+hashs:
+  hs_hash:
+    whitelisted: true
+  hs_nstitle:
+    whitelisted: true
+  hs_old_id:
+    whitelisted: true
+  hs_timestamp:
+    whitelisted: true
+  hs_user_text:
+    whitelisted: true
+hitcounter:
+  hc_id:
+    whitelisted: true
+image:
+  img_bits:
+    whitelisted: true
+  img_description:
+    whitelisted: true
+  img_height:
+    whitelisted: true
+  img_major_mime:
+    whitelisted: true
+  img_media_type:
+    whitelisted: true
+  img_metadata:
+    whitelisted: true
+  img_minor_mime:
+    whitelisted: true
+  img_name:
+    whitelisted: true
+  img_sha1:
+    whitelisted: true
+  img_size:
+    whitelisted: true
+  img_timestamp:
+    whitelisted: true
+  img_user:
+    whitelisted: true
+  img_user_text:
+    whitelisted: true
+  img_width:
+    whitelisted: true
+imagelinks:
+  il_from:
+    whitelisted: true
+  il_from_namespace:
+    whitelisted: true
+  il_to:
+    whitelisted: true
+interwiki:
+  iw_api:
+    whitelisted: true
+  iw_local:
+    whitelisted: true
+  iw_prefix:
+    whitelisted: true
+  iw_trans:
+    whitelisted: true
+  iw_url:
+    whitelisted: true
+  iw_wikiid:
+    whitelisted: true
+ipblocks:
+  __where__: ipb_deleted = 0
+  ipb_address:
+    whitelisted: false
+    condition: ipb_auto != 0
+    replacewith: null
+  ipb_allow_usertalk:
+    whitelisted: true
+  ipb_anon_only:
+    whitelisted: true
+  ipb_auto:
+    whitelisted: true
+  ipb_block_email:
+    whitelisted: true
+  ipb_by:
+    whitelisted: true
+  ipb_by_text:
+    whitelisted: true
+  ipb_create_account:
+    whitelisted: true
+  ipb_deleted:
+    whitelisted: false
+    replacewith: 0 # Why 0 and not NULL?
+  ipb_enable_autoblock:
+    whitelisted: true
+  ipb_expiry:
+    whitelisted: true
+  ipb_id:
+    whitelisted: true
+  ipb_parent_block_id:
+    whitelisted: true
+  ipb_range_end:
+    whitelisted: false
+    condition: ipb_auto != 0
+    replacewith: null
+  ipb_range_start:
+    whitelisted: false
+    condition: ipb_auto != 0
+    replacewith: null
+  ipb_reason:
+    whitelisted: true
+  ipb_timestamp:
+    whitelisted: true
+  ipb_user:
+    whitelisted: true
+ipblocks_ipindex:
+  __where__: ipb_deleted = 0 AND ipb_auto = 0
+  ipb_address:
+    whitelisted: false
+    condition: ipb_auto != 0
+    replacewith: null
+  ipb_allow_usertalk:
+    whitelisted: true
+  ipb_anon_only:
+    whitelisted: true
+  ipb_auto:
+    whitelisted: true
+  ipb_block_email:
+    whitelisted: true
+  ipb_by:
+    whitelisted: true
+  ipb_by_text:
+    whitelisted: true
+  ipb_create_account:
+    whitelisted: true
+  ipb_deleted:
+    whitelisted: false
+    replacewith: 0 # Why 0 and not NULL?
+  ipb_enable_autoblock:
+    whitelisted: true
+  ipb_expiry:
+    whitelisted: true
+  ipb_id:
+    whitelisted: true
+  ipb_parent_block_id:
+    whitelisted: true
+  ipb_range_end:
+    whitelisted: false
+    condition: ipb_auto != 0
+    replacewith: null
+  ipb_range_start:
+    whitelisted: false
+    condition: ipb_auto != 0
+    replacewith: null
+  ipb_reason:
+    whitelisted: true
+  ipb_timestamp:
+    whitelisted: true
+  ipb_user:
+    whitelisted: true
+iwlinks:
+  iwl_from:
+    whitelisted: true
+  iwl_prefix:
+    whitelisted: true
+  iwl_title:
+    whitelisted: true
+l10n_cache:
+  lc_key:
+    whitelisted: true
+  lc_lang:
+    whitelisted: true
+  lc_value:
+    whitelisted: true
+langlinks:
+  ll_from:
+    whitelisted: true
+  ll_lang:
+    whitelisted: true
+  ll_title:
+    whitelisted: true
+links:
+  l_from:
+    whitelisted: true
+  l_to:
+    whitelisted: true
+localisation:
+  lo_key:
+    whitelisted: true
+  lo_language:
+    whitelisted: true
+  lo_value:
+    whitelisted: true
+localisation_file_hash:
+  lfh_file:
+    whitelisted: true
+  lfh_hash:
+    whitelisted: true
+  lfh_timestamp:
+    whitelisted: true
+logging:
+  __where__: logtype != 'suppress'
+  log_action:
+    whitelisted: false
+    condition: log_deleted & 1
+    replacewith: null
+  log_comment:
+    whitelisted: false
+    condition: log_deleted & 2
+    replacewith: null
+  log_deleted:
+    whitelisted: true
+  log_id:
+    whitelisted: true
+  log_namespace:
+    whitelisted: false
+    condition: log_deleted & 1
+    replacewith: null
+  log_page:
+    whitelisted: false
+    condition: log_deleted & 1
+    replacewith: null
+  log_params:
+    whitelisted: false
+    condition: log_deleted & 1
+    replacewith: null
+  log_timestamp:
+    whitelisted: true
+  log_title:
+    whitelisted: false
+    condition: log_deleted & 1
+    replacewith: null
+  log_type:
+    whitelisted: true
+  log_user:
+    whitelisted: false
+    condition: log_deleted & 4
+    replacewith: null
+  log_user_text:
+    whitelisted: false
+    condition: log_deleted & 4
+    replacewith: null
+logging_logindex:
+  __where__: log_deleted & 0 = 0 AND logtype != 'suppress'
+  log_action:
+    whitelisted: false
+    condition: log_deleted & 1
+    replacewith: null
+  log_comment:
+    whitelisted: false
+    condition: log_deleted & 2
+    replacewith: null
+  log_deleted:
+    whitelisted: true
+  log_id:
+    whitelisted: true
+  log_namespace:
+    whitelisted: false
+    condition: log_deleted & 1
+    replacewith: null
+  log_page:
+    whitelisted: false
+    condition: log_deleted & 1
+    replacewith: null
+  log_params:
+    whitelisted: false
+    condition: log_deleted & 1
+    replacewith: null
+  log_timestamp:
+    whitelisted: true
+  log_title:
+    whitelisted: false
+    condition: log_deleted & 1
+    replacewith: null
+  log_type:
+    whitelisted: true
+  log_user:
+    whitelisted: false
+    condition: log_deleted & 4
+    replacewith: null
+  log_user_text:
+    whitelisted: false
+    condition: log_deleted & 4
+    replacewith: null
+logging_userindex:
+  __where__: log_deleted & 4 = 0 AND log_type != 'suppress'
+  log_action:
+    whitelisted: false
+    condition: log_deleted & 1
+    replacewith: null
+  log_comment:
+    whitelisted: false
+    condition: log_deleted & 2
+    replacewith: null
+  log_deleted:
+    whitelisted: true
+  log_id:
+    whitelisted: true
+  log_namespace:
+    whitelisted: false
+    condition: log_deleted & 1
+    replacewith: null
+  log_page:
+    whitelisted: false
+    condition: log_deleted & 1
+    replacewith: null
+  log_params:
+    whitelisted: false
+    condition: log_deleted & 1
+    replacewith: null
+  log_timestamp:
+    whitelisted: true
+  log_title:
+    whitelisted: false
+    condition: log_deleted & 1
+    replacewith: null
+  log_type:
+    whitelisted: true
+  log_user:
+    whitelisted: false
+    condition: log_deleted & 4
+    replacewith: null
+  log_user_text:
+    whitelisted: false
+    condition: log_deleted & 4
+    replacewith: null
+mark_as_helpful:
+  mah_id:
+    whitelisted: true
+  mah_item:
+    whitelisted: true
+  mah_locale:
+    whitelisted: false
+    replacewith: null
+  mah_namespace:
+    whitelisted: true
+  mah_system_type:
+    whitelisted: false
+    replacewith: null
+  mah_timestamp:
+    whitelisted: true
+  mah_title:
+    whitelisted: true
+  mah_type:
+    whitelisted: true
+  mah_user_agent:
+    whitelisted: false
+    replacewith: null
+  mah_user_editcount:
+    whitelisted: true
+  mah_user_id:
+    whitelisted: true
+math:
+  math_html:
+    whitelisted: true
+  math_html_conservativeness:
+    whitelisted: true
+  math_inputhash:
+    whitelisted: true
+  math_mathml:
+    whitelisted: true
+  math_outputhash:
+    whitelisted: true
+module_deps:
+  md_deps:
+    whitelisted: true
+  md_module:
+    whitelisted: true
+  md_skin:
+    whitelisted: true
+msg_resource:
+  mr_blob:
+    whitelisted: true
+  mr_lang:
+    whitelisted: true
+  mr_resource:
+    whitelisted: true
+  mr_timestamp:
+    whitelisted: true
+msg_resource_links:
+  mrl_message:
+    whitelisted: true
+  mrl_resource:
+    whitelisted: true
+oldimage:
+  oi_archive_name:
+    whitelisted: true
+  oi_bits:
+    whitelisted: true
+  oi_deleted:
+    whitelisted: true
+  oi_description:
+    whitelisted: false
+    condition: oi_deleted & 2
+    replacewith: null
+  oi_height:
+    whitelisted: true
+  oi_major_mime:
+    whitelisted: true
+  oi_media_type:
+    whitelisted: true
+  oi_metadata:
+    whitelisted: true
+  oi_minor_mime:
+    whitelisted: true
+  oi_name:
+    whitelisted: true
+  oi_sha1:
+    whitelisted: true
+  oi_size:
+    whitelisted: true
+  oi_timestamp:
+    whitelisted: true
+  oi_user:
+    whitelisted: false
+    condition: oi_deleted & 4
+    replacewith: null
+  oi_user_text:
+    whitelisted: false
+    condition: oi_deleted & 4
+    replacewith: null
+  oi_width:
+    whitelisted: true
+oldimage_userindex:
+  __where__: oi_deleted & 4 = 0 
+  oi_archive_name:
+    whitelisted: true
+  oi_bits:
+    whitelisted: true
+  oi_deleted:
+    whitelisted: true
+  oi_description:
+    whitelisted: false
+    condition: oi_deleted & 2
+    replacewith: null
+  oi_height:
+    whitelisted: true
+  oi_major_mime:
+    whitelisted: true
+  oi_media_type:
+    whitelisted: true
+  oi_metadata:
+    whitelisted: true
+  oi_minor_mime:
+    whitelisted: true
+  oi_name:
+    whitelisted: true
+  oi_sha1:
+    whitelisted: true
+  oi_size:
+    whitelisted: true
+  oi_timestamp:
+    whitelisted: true
+  oi_user:
+    whitelisted: false
+    condition: oi_deleted & 4
+    replacewith: null
+  oi_user_text:
+    whitelisted: false
+    condition: oi_deleted & 4
+    replacewith: null
+  oi_width:
+    whitelisted: true
+page:
+  page_content_model:
+    whitelisted: true
+  page_counter:
+    whitelisted: true
+  page_id:
+    whitelisted: true
+  page_is_new:
+    whitelisted: true
+  page_is_redirect:
+    whitelisted: true
+  page_latest:
+    whitelisted: true
+  page_len:
+    whitelisted: true
+  page_links_updated:
+    whitelisted: true
+  page_namespace:
+    whitelisted: true
+  page_no_title_convert:
+    whitelisted: true
+  page_random:
+    whitelisted: true
+  page_restrictions:
+    whitelisted: true
+  page_title:
+    whitelisted: true
+  page_touched:
+    whitelisted: true
+page_props:
+  pp_page:
+    whitelisted: true
+  pp_propname:
+    whitelisted: true
+  pp_sortkey:
+    whitelisted: true
+  pp_value:
+    whitelisted: true
+page_restrictions:
+  pr_cascade:
+    whitelisted: true
+  pr_expiry:
+    whitelisted: true
+  pr_id:
+    whitelisted: true
+  pr_level:
+    whitelisted: true
+  pr_page:
+    whitelisted: true
+  pr_type:
+    whitelisted: true
+  pr_user:
+    whitelisted: true
+pagelinks:
+  pl_from:
+    whitelisted: true
+  pl_from_namespace:
+    whitelisted: true
+  pl_namespace:
+    whitelisted: true
+  pl_title:
+    whitelisted: true
+pagetriage_log:
+  ptrl_comment:
+    whitelisted: true
+  ptrl_id:
+    whitelisted: true
+  ptrl_page_id:
+    whitelisted: true
+  ptrl_reviewed:
+    whitelisted: true
+  ptrl_timestamp:
+    whitelisted: true
+  ptrl_user_id:
+    whitelisted: true
+pagetriage_page:
+  ptrp_created:
+    whitelisted: true
+  ptrp_deleted:
+    whitelisted: true
+  ptrp_last_reviewed_by:
+    whitelisted: true
+  ptrp_page_id:
+    whitelisted: true
+  ptrp_reviewed:
+    whitelisted: true
+  ptrp_reviewed_updated:
+    whitelisted: true
+  ptrp_tags_updated:
+    whitelisted: true
+pagetriage_page_tags:
+  ptrpt_page_id:
+    whitelisted: true
+  ptrpt_tag_id:
+    whitelisted: true
+  ptrpt_value:
+    whitelisted: true
+pagetriage_tags:
+  ptrt_tag_desc:
+    whitelisted: true
+  ptrt_tag_id:
+    whitelisted: true
+  ptrt_tag_name:
+    whitelisted: true
+pif_edits:
+  pif_edits:
+    whitelisted: true
+  pif_user:
+    whitelisted: true
+povwatch_log:
+  pwl_comment:
+    whitelisted: true
+  pwl_id:
+    whitelisted: true
+  pwl_namespace:
+    whitelisted: true
+  pwl_timestamp:
+    whitelisted: true
+  pwl_title:
+    whitelisted: true
+  pwl_user:
+    whitelisted: true
+povwatch_subscribers:
+  pws_user:
+    whitelisted: true
+protected_titles:
+  pt_create_perm:
+    whitelisted: true
+  pt_expiry:
+    whitelisted: true
+  pt_namespace:
+    whitelisted: true
+  pt_reason:
+    whitelisted: true
+  pt_timestamp:
+    whitelisted: true
+  pt_title:
+    whitelisted: true
+  pt_user:
+    whitelisted: true
+recentchanges:
+  rc_bot:
+    whitelisted: true
+  rc_comment:
+    whitelisted: false
+    condition: rc_deleted & 2
+    replacewith: null
+  rc_cur_id:
+    whitelisted: true
+  rc_cur_time:
+    whitelisted: true
+  rc_deleted:
+    whitelisted: true
+  rc_id:
+    whitelisted: true
+  rc_ip:
+    whitelisted: true
+  rc_last_oldid:
+    whitelisted: true
+  rc_log_action:
+    whitelisted: true
+  rc_log_type:
+    whitelisted: true
+  rc_logid:
+    whitelisted: true
+  rc_minor:
+    whitelisted: true
+  rc_namespace:
+    whitelisted: true
+  rc_new:
+    whitelisted: true
+  rc_new_len:
+    whitelisted: true
+  rc_old_len:
+    whitelisted: true
+  rc_params:
+    whitelisted: true
+  rc_patrolled:
+    whitelisted: true
+  rc_source:
+    whitelisted: true
+  rc_this_oldid:
+    whitelisted: true
+  rc_timestamp:
+    whitelisted: true
+  rc_title:
+    whitelisted: true
+  rc_type:
+    whitelisted: true
+  rc_user:
+    whitelisted: false
+    condition: rc_deleted & 4
+    replacewith: null
+  rc_user_text:
+    whitelisted: false
+    condition: rc_deleted & 4
+    replacewith: null
+recentchanges_userindex:
+  __where__: rc_deleted & 4 = 0
+  rc_bot:
+    whitelisted: true
+  rc_comment:
+    whitelisted: false
+    condition: rc_deleted & 2
+    replacewith: null
+  rc_cur_id:
+    whitelisted: true
+  rc_cur_time:
+    whitelisted: true
+  rc_deleted:
+    whitelisted: true
+  rc_id:
+    whitelisted: true
+  rc_ip:
+    whitelisted: true
+  rc_last_oldid:
+    whitelisted: true
+  rc_log_action:
+    whitelisted: true
+  rc_log_type:
+    whitelisted: true
+  rc_logid:
+    whitelisted: true
+  rc_minor:
+    whitelisted: true
+  rc_namespace:
+    whitelisted: true
+  rc_new:
+    whitelisted: true
+  rc_new_len:
+    whitelisted: true
+  rc_old_len:
+    whitelisted: true
+  rc_params:
+    whitelisted: true
+  rc_patrolled:
+    whitelisted: true
+  rc_source:
+    whitelisted: true
+  rc_this_oldid:
+    whitelisted: true
+  rc_timestamp:
+    whitelisted: true
+  rc_title:
+    whitelisted: true
+  rc_type:
+    whitelisted: true
+  rc_user:
+    whitelisted: false
+    condition: rc_deleted & 4
+    replacewith: null
+  rc_user_text:
+    whitelisted: false
+    condition: rc_deleted & 4
+    replacewith: null
+redirect:
+  rd_fragment:
+    whitelisted: true
+  rd_from:
+    whitelisted: true
+  rd_interwiki:
+    whitelisted: true
+  rd_namespace:
+    whitelisted: true
+  rd_title:
+    whitelisted: true
+revision:
+  rev_comment:
+    whitelisted: false
+    condition: rev_deleted & 2
+    replacewith: null
+  rev_content_format:
+    whitelisted: true
+  rev_content_model:
+    whitelisted: true
+  rev_deleted:
+    whitelisted: true
+  rev_id:
+    whitelisted: true
+  rev_len:
+    whitelisted: false
+    condition: rev_deleted & 1
+    replacewith: null
+  rev_minor_edit:
+    whitelisted: true
+  rev_page:
+    whitelisted: true
+  rev_parent_id:
+    whitelisted: true
+  rev_sha1:
+    whitelisted: false
+    condition: rev_deleted & 1
+    replacewith: null
+  rev_text_id:
+    whitelisted: false
+    condition: rev_deleted & 1
+    replacewith: null
+  rev_timestamp:
+    whitelisted: true
+  rev_user:
+    whitelisted: false
+    condition: rev_deleted & 4
+    replacewith: null
+  rev_user_text:
+    whitelisted: false
+    condition: rev_deleted & 4
+    replacewith: null
+revision_userindex:
+  __where__: rev_deleted & 4 = 0
+  rev_comment:
+    whitelisted: false
+    condition: rev_deleted & 2
+    replacewith: null
+  rev_content_format:
+    whitelisted: true
+  rev_content_model:
+    whitelisted: true
+  rev_deleted:
+    whitelisted: true
+  rev_id:
+    whitelisted: true
+  rev_len:
+    whitelisted: false
+    condition: rev_deleted & 1
+    replacewith: null
+  rev_minor_edit:
+    whitelisted: true
+  rev_page:
+    whitelisted: true
+  rev_parent_id:
+    whitelisted: true
+  rev_sha1:
+    whitelisted: false
+    condition: rev_deleted & 1
+    replacewith: null
+  rev_text_id:
+    whitelisted: false
+    condition: rev_deleted & 1
+    replacewith: null
+  rev_timestamp:
+    whitelisted: true
+  rev_user:
+    whitelisted: false
+    condition: rev_deleted & 4
+    replacewith: null
+  rev_user_text:
+    whitelisted: false
+    condition: rev_deleted & 4
+    replacewith: null
+revision_userindex:
+  rev_comment:
+    whitelisted: true
+  rev_content_format:
+    whitelisted: true
+  rev_content_model:
+    whitelisted: true
+  rev_deleted:
+    whitelisted: true
+  rev_id:
+    whitelisted: true
+  rev_len:
+    whitelisted: true
+  rev_minor_edit:
+    whitelisted: true
+  rev_page:
+    whitelisted: true
+  rev_parent_id:
+    whitelisted: true
+  rev_sha1:
+    whitelisted: true
+  rev_text_id:
+    whitelisted: true
+  rev_timestamp:
+    whitelisted: true
+  rev_user:
+    whitelisted: true
+  rev_user_text:
+    whitelisted: true
+site_identifiers:
+  si_key:
+    whitelisted: true
+  si_site:
+    whitelisted: true
+  si_type:
+    whitelisted: true
+site_stats:
+  ss_active_users:
+    whitelisted: true
+  ss_good_articles:
+    whitelisted: true
+  ss_images:
+    whitelisted: true
+  ss_row_id:
+    whitelisted: true
+  ss_total_edits:
+    whitelisted: true
+  ss_total_pages:
+    whitelisted: true
+  ss_total_views:
+    whitelisted: true
+  ss_users:
+    whitelisted: true
+sites:
+  site_config:
+    whitelisted: true
+  site_data:
+    whitelisted: true
+  site_domain:
+    whitelisted: true
+  site_forward:
+    whitelisted: true
+  site_global_key:
+    whitelisted: true
+  site_group:
+    whitelisted: true
+  site_id:
+    whitelisted: true
+  site_language:
+    whitelisted: true
+  site_protocol:
+    whitelisted: true
+  site_source:
+    whitelisted: true
+  site_type:
+    whitelisted: true
+tag_summary:
+  ts_log_id:
+    whitelisted: true
+  ts_rc_id:
+    whitelisted: true
+  ts_rev_id:
+    whitelisted: true
+  ts_tags:
+    whitelisted: true
+templatelinks:
+  tl_from:
+    whitelisted: true
+  tl_from_namespace:
+    whitelisted: true
+  tl_namespace:
+    whitelisted: true
+  tl_title:
+    whitelisted: true
+transcode:
+  transcode_error:
+    whitelisted: true
+  transcode_final_bitrate:
+    whitelisted: true
+  transcode_id:
+    whitelisted: true
+  transcode_image_name:
+    whitelisted: true
+  transcode_key:
+    whitelisted: true
+  transcode_time_addjob:
+    whitelisted: true
+  transcode_time_error:
+    whitelisted: true
+  transcode_time_startwork:
+    whitelisted: true
+  transcode_time_success:
+    whitelisted: true
+updatelog:
+  ul_key:
+    whitelisted: true
+  ul_value:
+    whitelisted: true
+updates:
+  up_action:
+    whitelisted: true
+  up_page:
+    whitelisted: true
+  up_sequence:
+    whitelisted: true
+  up_timestamp:
+    whitelisted: true
+user:
+  user_editcount:
+    whitelisted: true
+  user_email:
+    whitelisted: false
+    replacewith: null
+  user_email_authenticated:
+    whitelisted: false
+    replacewith: null
+  user_email_token:
+    whitelisted: false
+    replacewith: null
+  user_email_token_expires:
+    whitelisted: false
+    replacewith: null
+  user_id:
+    whitelisted: true
+  user_name:
+    whitelisted: true
+  user_newpass_time:
+    whitelisted: false
+    replacewith: null
+  user_newpassword:
+    whitelisted: false
+    replacewith: null
+  user_options:
+    whitelisted: false
+    replacewith: null
+  user_password:
+    whitelisted: false
+    replacewith: null
+  user_password_expires:
+    whitelisted: false
+    replacewith: null
+  user_real_name:
+    whitelisted: true
+  user_registration:
+    whitelisted: true
+    whitelisted: false
+  user_token:
+    whitelisted: false
+    replacewith: null
+  user_touched:
+    whitelisted: false
+    replacewith: null
+user_daily_contribs:
+  contribs:
+    whitelisted: true
+  day:
+    whitelisted: true
+  user_id:
+    whitelisted: true
+user_former_groups:
+  ufg_group:
+    whitelisted: true
+  ufg_user:
+    whitelisted: true
+user_groups:
+  ug_group:
+    whitelisted: true
+  ug_user:
+    whitelisted: true
+user_old:
+  user_email:
+    whitelisted: false
+    replacewith: null
+  user_id:
+    whitelisted: true
+  user_name:
+    whitelisted: true
+  user_newpassword:
+    whitelisted: false
+    replacewith: null
+  user_newtalk:
+    whitelisted: false
+    replacewith: null
+  user_options:
+    whitelisted: false
+    replacewith: null
+  user_password:
+    whitelisted: false
+    replacewith: null
+  user_real_name:
+    whitelisted: true
+  user_token:
+    whitelisted: false
+    replacewith: null
+  user_touched:
+    whitelisted: false
+    replacewith: null
+user_properties:
+  __where__: up_property in ('disablemail', 'fancysig', 'gender', 'language', 'nickname', 'skin', 'timecorrection', 'variant')
+  up_property:
+    whitelisted: true
+  up_user:
+    whitelisted: true
+  up_value:
+    whitelisted: true
+valid_tag:
+  vt_tag:
+    whitelisted: true
+wb_changes:
+  change_id:
+    whitelisted: true
+  change_info:
+    whitelisted: true
+  change_object_id:
+    whitelisted: true
+  change_revision_id:
+    whitelisted: true
+  change_time:
+    whitelisted: true
+  change_type:
+    whitelisted: true
+  change_user_id:
+    whitelisted: true
+wb_changes_dispatch:
+  chd_db:
+    whitelisted: true
+  chd_disabled:
+    whitelisted: true
+  chd_lock:
+    whitelisted: true
+  chd_seen:
+    whitelisted: true
+  chd_site:
+    whitelisted: true
+  chd_touched:
+    whitelisted: true
+wb_entity_per_page:
+  epp_entity_id:
+    whitelisted: true
+  epp_entity_type:
+    whitelisted: true
+  epp_page_id:
+    whitelisted: true
+  epp_redirect_target:
+    whitelisted: true
+wb_id_counters:
+  id_type:
+    whitelisted: true
+  id_value:
+    whitelisted: true
+wb_items_per_site:
+  ips_item_id:
+    whitelisted: true
+  ips_row_id:
+    whitelisted: true
+  ips_site_id:
+    whitelisted: true
+  ips_site_page:
+    whitelisted: true
+wb_property_info:
+  pi_info:
+    whitelisted: true
+  pi_property_id:
+    whitelisted: true
+  pi_type:
+    whitelisted: true
+wb_terms:
+  term_entity_id:
+    whitelisted: true
+  term_entity_type:
+    whitelisted: true
+  term_language:
+    whitelisted: true
+  term_row_id:
+    whitelisted: true
+  term_search_key:
+    whitelisted: true
+  term_text:
+    whitelisted: true
+  term_type:
+    whitelisted: true
+  term_weight:
+    whitelisted: true
+wikilove_image_log:
+  wlil_id:
+    whitelisted: true
+  wlil_image:
+    whitelisted: true
+  wlil_success:
+    whitelisted: true
+  wlil_timestamp:
+    whitelisted: true
+  wlil_user_id:
+    whitelisted: true
+wikilove_log:
+  wll_email:
+    whitelisted: true
+  wll_id:
+    whitelisted: true
+  wll_message:
+    whitelisted: true
+  wll_receiver:
+    whitelisted: true
+  wll_receiver_editcount:
+    whitelisted: true
+  wll_receiver_registration:
+    whitelisted: true
+  wll_sender:
+    whitelisted: true
+  wll_sender_editcount:
+    whitelisted: true
+  wll_sender_registration:
+    whitelisted: true
+  wll_subject:
+    whitelisted: true
+  wll_timestamp:
+    whitelisted: true
+  wll_type:
+    whitelisted: true
