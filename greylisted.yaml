@@ -3,7 +3,6 @@ abuse_filter:
     whitelisted: true
   af_comments:
     condition: af_hidden != NULL
-    replacewith: null
     whitelisted: false
   af_deleted:
     whitelisted: true
@@ -21,7 +20,6 @@ abuse_filter:
     whitelisted: true
   af_pattern:
     condition: af_hidden != NULL
-    replacewith: null
     whitelisted: false
   af_public_comments:
     whitelisted: true
@@ -45,7 +43,6 @@ abuse_filter_log:
   afl_id:
     whitelisted: true
   afl_ip:
-    replacewith: null
     whitelisted: false
   afl_log_id:
     whitelisted: true
@@ -141,11 +138,9 @@ aft_article_feedback:
   af_user_id:
     whitelisted: true
   af_user_ip:
-    replacewith: null
     whitelisted: false
 archive:
   ar_comment:
-    replacewith: null
     whitelisted: false
   ar_deleted:
     whitelisted: true
@@ -155,7 +150,6 @@ archive:
     whitelisted: true
   ar_len:
     condition: ar_deleted & 1
-    replacewith: null
     whitelisted: false
   ar_minor_edit:
     whitelisted: true
@@ -169,14 +163,11 @@ archive:
     whitelisted: true
   ar_sha1:
     condition: ar_deleted & 1
-    replacewith: null
     whitelisted: false
   ar_text:
-    replacewith: null
     whitelisted: false
   ar_text_id:
     condition: ar_deleted & 1
-    replacewith: null
     whitelisted: false
   ar_timestamp:
     whitelisted: true
@@ -184,16 +175,13 @@ archive:
     whitelisted: true
   ar_user:
     condition: ar_deleted & 4
-    replacewith: null
     whitelisted: false
   ar_user_text:
     condition: ar_deleted & 4
-    replacewith: null
     whitelisted: false
 archive_userindex:
   __where__: ar_deleted & 4 = 0
   ar_comment:
-    replacewith: null
     whitelisted: false
   ar_deleted:
     whitelisted: true
@@ -203,7 +191,6 @@ archive_userindex:
     whitelisted: true
   ar_len:
     condition: ar_deleted & 1
-    replacewith: null
     whitelisted: false
   ar_minor_edit:
     whitelisted: true
@@ -217,14 +204,11 @@ archive_userindex:
     whitelisted: true
   ar_sha1:
     condition: ar_deleted & 1
-    replacewith: null
     whitelisted: false
   ar_text:
-    replacewith: null
     whitelisted: false
   ar_text_id:
     condition: ar_deleted & 1
-    replacewith: null
     whitelisted: false
   ar_timestamp:
     whitelisted: true
@@ -232,18 +216,15 @@ archive_userindex:
     whitelisted: true
   ar_user:
     condition: ar_deleted & 4
-    replacewith: null
     whitelisted: false
   ar_user_text:
     condition: ar_deleted & 4
-    replacewith: null
     whitelisted: false
 filearchive:
   fa_archive_name:
     whitelisted: true
   fa_bits:
     condition: fa_deleted & 1
-    replacewith: null
     whitelisted: false
   fa_deleted:
     whitelisted: true
@@ -255,58 +236,46 @@ filearchive:
     whitelisted: true
   fa_description:
     condition: fa_deleted & 2
-    replacewith: null
     whitelisted: false
   fa_height:
     condition: fa_deleted & 1
-    replacewith: null
     whitelisted: false
   fa_id:
     whitelisted: true
   fa_major_mime:
     condition: fa_deleted & 1
-    replacewith: null
     whitelisted: false
   fa_media_type:
     condition: fa_deleted & 1
-    replacewith: null
     whitelisted: false
   fa_metadata:
     condition: fa_deleted & 1
-    replacewith: null
     whitelisted: false
   fa_minor_mime:
     whitelisted: true
   fa_name:
     condition: fa_deleted & 1
-    replacewith: null
     whitelisted: false
   fa_sha1:
     condition: fa_deleted & 1
-    replacewith: null
     whitelisted: false
   fa_size:
     condition: fa_deleted & 1
-    replacewith: null
     whitelisted: false
   fa_storage_group:
     whitelisted: true
   fa_storage_key:
-    replacewith: null
     whitelisted: false
   fa_timestamp:
     whitelisted: true
   fa_user:
     condition: fa_deleted & 4
-    replacewith: null
     whitelisted: false
   fa_user_text:
     condition: fa_deleted & 4
-    replacewith: null
     whitelisted: false
   fa_width:
     condition: fa_deleted & 1
-    replacewith: null
     whitelisted: false
 filearchive_userindex:
   __where__: fa_deleted & 4 = 0
@@ -314,7 +283,6 @@ filearchive_userindex:
     whitelisted: true
   fa_bits:
     condition: fa_deleted & 1
-    replacewith: null
     whitelisted: false
   fa_deleted:
     whitelisted: true
@@ -326,64 +294,51 @@ filearchive_userindex:
     whitelisted: true
   fa_description:
     condition: fa_deleted & 2
-    replacewith: null
     whitelisted: false
   fa_height:
     condition: fa_deleted & 1
-    replacewith: null
     whitelisted: false
   fa_id:
     whitelisted: true
   fa_major_mime:
     condition: fa_deleted & 1
-    replacewith: null
     whitelisted: false
   fa_media_type:
     condition: fa_deleted & 1
-    replacewith: null
     whitelisted: false
   fa_metadata:
     condition: fa_deleted & 1
-    replacewith: null
     whitelisted: false
   fa_minor_mime:
     whitelisted: true
   fa_name:
     condition: fa_deleted & 1
-    replacewith: null
     whitelisted: false
   fa_sha1:
     condition: fa_deleted & 1
-    replacewith: null
     whitelisted: false
   fa_size:
     condition: fa_deleted & 1
-    replacewith: null
     whitelisted: false
   fa_storage_group:
     whitelisted: true
   fa_storage_key:
-    replacewith: null
     whitelisted: false
   fa_timestamp:
     whitelisted: true
   fa_user:
     condition: fa_deleted & 4
-    replacewith: null
     whitelisted: false
   fa_user_text:
     condition: fa_deleted & 4
-    replacewith: null
     whitelisted: false
   fa_width:
     condition: fa_deleted & 1
-    replacewith: null
     whitelisted: false
 ipblocks:
   __where__: ipb_deleted = 0
   ipb_address:
     condition: ipb_auto != 0
-    replacewith: null
     whitelisted: false
   ipb_allow_usertalk:
     whitelisted: true
@@ -412,11 +367,9 @@ ipblocks:
     whitelisted: true
   ipb_range_end:
     condition: ipb_auto != 0
-    replacewith: null
     whitelisted: false
   ipb_range_start:
     condition: ipb_auto != 0
-    replacewith: null
     whitelisted: false
   ipb_reason:
     whitelisted: true
@@ -428,7 +381,6 @@ ipblocks_ipindex:
   __where__: ipb_deleted = 0 AND ipb_auto = 0
   ipb_address:
     condition: ipb_auto != 0
-    replacewith: null
     whitelisted: false
   ipb_allow_usertalk:
     whitelisted: true
@@ -457,11 +409,9 @@ ipblocks_ipindex:
     whitelisted: true
   ipb_range_end:
     condition: ipb_auto != 0
-    replacewith: null
     whitelisted: false
   ipb_range_start:
     condition: ipb_auto != 0
-    replacewith: null
     whitelisted: false
   ipb_reason:
     whitelisted: true
@@ -473,11 +423,9 @@ logging:
   __where__: logtype != 'suppress'
   log_action:
     condition: log_deleted & 1
-    replacewith: null
     whitelisted: false
   log_comment:
     condition: log_deleted & 2
-    replacewith: null
     whitelisted: false
   log_deleted:
     whitelisted: true
@@ -485,41 +433,33 @@ logging:
     whitelisted: true
   log_namespace:
     condition: log_deleted & 1
-    replacewith: null
     whitelisted: false
   log_page:
     condition: log_deleted & 1
-    replacewith: null
     whitelisted: false
   log_params:
     condition: log_deleted & 1
-    replacewith: null
     whitelisted: false
   log_timestamp:
     whitelisted: true
   log_title:
     condition: log_deleted & 1
-    replacewith: null
     whitelisted: false
   log_type:
     whitelisted: true
   log_user:
     condition: log_deleted & 4
-    replacewith: null
     whitelisted: false
   log_user_text:
     condition: log_deleted & 4
-    replacewith: null
     whitelisted: false
 logging_logindex:
   __where__: log_deleted & 0 = 0 AND logtype != 'suppress'
   log_action:
     condition: log_deleted & 1
-    replacewith: null
     whitelisted: false
   log_comment:
     condition: log_deleted & 2
-    replacewith: null
     whitelisted: false
   log_deleted:
     whitelisted: true
@@ -527,41 +467,33 @@ logging_logindex:
     whitelisted: true
   log_namespace:
     condition: log_deleted & 1
-    replacewith: null
     whitelisted: false
   log_page:
     condition: log_deleted & 1
-    replacewith: null
     whitelisted: false
   log_params:
     condition: log_deleted & 1
-    replacewith: null
     whitelisted: false
   log_timestamp:
     whitelisted: true
   log_title:
     condition: log_deleted & 1
-    replacewith: null
     whitelisted: false
   log_type:
     whitelisted: true
   log_user:
     condition: log_deleted & 4
-    replacewith: null
     whitelisted: false
   log_user_text:
     condition: log_deleted & 4
-    replacewith: null
     whitelisted: false
 logging_userindex:
   __where__: log_deleted & 4 = 0 AND log_type != 'suppress'
   log_action:
     condition: log_deleted & 1
-    replacewith: null
     whitelisted: false
   log_comment:
     condition: log_deleted & 2
-    replacewith: null
     whitelisted: false
   log_deleted:
     whitelisted: true
@@ -569,31 +501,25 @@ logging_userindex:
     whitelisted: true
   log_namespace:
     condition: log_deleted & 1
-    replacewith: null
     whitelisted: false
   log_page:
     condition: log_deleted & 1
-    replacewith: null
     whitelisted: false
   log_params:
     condition: log_deleted & 1
-    replacewith: null
     whitelisted: false
   log_timestamp:
     whitelisted: true
   log_title:
     condition: log_deleted & 1
-    replacewith: null
     whitelisted: false
   log_type:
     whitelisted: true
   log_user:
     condition: log_deleted & 4
-    replacewith: null
     whitelisted: false
   log_user_text:
     condition: log_deleted & 4
-    replacewith: null
     whitelisted: false
 mark_as_helpful:
   mah_id:
@@ -601,12 +527,10 @@ mark_as_helpful:
   mah_item:
     whitelisted: true
   mah_locale:
-    replacewith: null
     whitelisted: false
   mah_namespace:
     whitelisted: true
   mah_system_type:
-    replacewith: null
     whitelisted: false
   mah_timestamp:
     whitelisted: true
@@ -615,7 +539,6 @@ mark_as_helpful:
   mah_type:
     whitelisted: true
   mah_user_agent:
-    replacewith: null
     whitelisted: false
   mah_user_editcount:
     whitelisted: true
@@ -630,7 +553,6 @@ oldimage:
     whitelisted: true
   oi_description:
     condition: oi_deleted & 2
-    replacewith: null
     whitelisted: false
   oi_height:
     whitelisted: true
@@ -652,11 +574,9 @@ oldimage:
     whitelisted: true
   oi_user:
     condition: oi_deleted & 4
-    replacewith: null
     whitelisted: false
   oi_user_text:
     condition: oi_deleted & 4
-    replacewith: null
     whitelisted: false
   oi_width:
     whitelisted: true
@@ -670,7 +590,6 @@ oldimage_userindex:
     whitelisted: true
   oi_description:
     condition: oi_deleted & 2
-    replacewith: null
     whitelisted: false
   oi_height:
     whitelisted: true
@@ -692,11 +611,9 @@ oldimage_userindex:
     whitelisted: true
   oi_user:
     condition: oi_deleted & 4
-    replacewith: null
     whitelisted: false
   oi_user_text:
     condition: oi_deleted & 4
-    replacewith: null
     whitelisted: false
   oi_width:
     whitelisted: true
@@ -705,7 +622,6 @@ recentchanges:
     whitelisted: true
   rc_comment:
     condition: rc_deleted & 2
-    replacewith: null
     whitelisted: false
   rc_cur_id:
     whitelisted: true
@@ -751,11 +667,9 @@ recentchanges:
     whitelisted: true
   rc_user:
     condition: rc_deleted & 4
-    replacewith: null
     whitelisted: false
   rc_user_text:
     condition: rc_deleted & 4
-    replacewith: null
     whitelisted: false
 recentchanges_userindex:
   __where__: rc_deleted & 4 = 0
@@ -763,7 +677,6 @@ recentchanges_userindex:
     whitelisted: true
   rc_comment:
     condition: rc_deleted & 2
-    replacewith: null
     whitelisted: false
   rc_cur_id:
     whitelisted: true
@@ -809,16 +722,13 @@ recentchanges_userindex:
     whitelisted: true
   rc_user:
     condition: rc_deleted & 4
-    replacewith: null
     whitelisted: false
   rc_user_text:
     condition: rc_deleted & 4
-    replacewith: null
     whitelisted: false
 revision:
   rev_comment:
     condition: rev_deleted & 2
-    replacewith: null
     whitelisted: false
   rev_content_format:
     whitelisted: true
@@ -830,7 +740,6 @@ revision:
     whitelisted: true
   rev_len:
     condition: rev_deleted & 1
-    replacewith: null
     whitelisted: false
   rev_minor_edit:
     whitelisted: true
@@ -840,91 +749,69 @@ revision:
     whitelisted: true
   rev_sha1:
     condition: rev_deleted & 1
-    replacewith: null
     whitelisted: false
   rev_text_id:
     condition: rev_deleted & 1
-    replacewith: null
     whitelisted: false
   rev_timestamp:
     whitelisted: true
   rev_user:
     condition: rev_deleted & 4
-    replacewith: null
     whitelisted: false
   rev_user_text:
     condition: rev_deleted & 4
-    replacewith: null
     whitelisted: false
 user:
   user_editcount:
     whitelisted: true
   user_email:
-    replacewith: null
     whitelisted: false
   user_email_authenticated:
-    replacewith: null
     whitelisted: false
   user_email_token:
-    replacewith: null
     whitelisted: false
   user_email_token_expires:
-    replacewith: null
     whitelisted: false
   user_id:
     whitelisted: true
   user_name:
     whitelisted: true
   user_newpass_time:
-    replacewith: null
     whitelisted: false
   user_newpassword:
-    replacewith: null
     whitelisted: false
   user_options:
-    replacewith: null
     whitelisted: false
   user_password:
-    replacewith: null
     whitelisted: false
   user_password_expires:
-    replacewith: null
     whitelisted: false
   user_real_name:
     whitelisted: true
   user_registration:
     whitelisted: false
   user_token:
-    replacewith: null
     whitelisted: false
   user_touched:
-    replacewith: null
     whitelisted: false
 user_old:
   user_email:
-    replacewith: null
     whitelisted: false
   user_id:
     whitelisted: true
   user_name:
     whitelisted: true
   user_newpassword:
-    replacewith: null
     whitelisted: false
   user_newtalk:
-    replacewith: null
     whitelisted: false
   user_options:
-    replacewith: null
     whitelisted: false
   user_password:
-    replacewith: null
     whitelisted: false
   user_real_name:
     whitelisted: true
   user_token:
-    replacewith: null
     whitelisted: false
   user_touched:
-    replacewith: null
     whitelisted: false
