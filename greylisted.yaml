@@ -1,817 +1,847 @@
 abuse_filter:
-  af_actions:
-    whitelisted: true
-  af_comments:
-    condition: af_hidden != NULL
-    whitelisted: false
-  af_deleted:
-    whitelisted: true
-  af_enabled:
-    whitelisted: true
-  af_global:
-    whitelisted: true
-  af_group:
-    whitelisted: true
-  af_hidden:
-    whitelisted: true
-  af_hit_count:
-    whitelisted: true
-  af_id:
-    whitelisted: true
-  af_pattern:
-    condition: af_hidden != NULL
-    whitelisted: false
-  af_public_comments:
-    whitelisted: true
-  af_throttled:
-    whitelisted: true
-  af_timestamp:
-    whitelisted: true
-  af_user:
-    whitelisted: true
-  af_user_text:
-    whitelisted: true
+  columns:
+    af_actions:
+      whitelisted: true
+    af_comments:
+      condition: af_hidden != NULL
+      whitelisted: false
+    af_deleted:
+      whitelisted: true
+    af_enabled:
+      whitelisted: true
+    af_global:
+      whitelisted: true
+    af_group:
+      whitelisted: true
+    af_hidden:
+      whitelisted: true
+    af_hit_count:
+      whitelisted: true
+    af_id:
+      whitelisted: true
+    af_pattern:
+      condition: af_hidden != NULL
+      whitelisted: false
+    af_public_comments:
+      whitelisted: true
+    af_throttled:
+      whitelisted: true
+    af_timestamp:
+      whitelisted: true
+    af_user:
+      whitelisted: true
+    af_user_text:
+      whitelisted: true
 abuse_filter_log:
-  afl_action:
-    whitelisted: true
-  afl_actions:
-    whitelisted: true
-  afl_deleted:
-    whitelisted: true
-  afl_filter:
-    whitelisted: true
-  afl_id:
-    whitelisted: true
-  afl_ip:
-    whitelisted: false
-  afl_log_id:
-    whitelisted: true
-  afl_namespace:
-    whitelisted: true
-  afl_patrolled_by:
-    whitelisted: true
-  afl_rev_id:
-    whitelisted: true
-  afl_timestamp:
-    whitelisted: true
-  afl_title:
-    whitelisted: true
-  afl_user:
-    whitelisted: true
-  afl_user_text:
-    whitelisted: true
-  afl_var_dump:
-    whitelisted: true
-  afl_wiki:
-    whitelisted: true
+  columns:
+    afl_action:
+      whitelisted: true
+    afl_actions:
+      whitelisted: true
+    afl_deleted:
+      whitelisted: true
+    afl_filter:
+      whitelisted: true
+    afl_id:
+      whitelisted: true
+    afl_ip:
+      whitelisted: false
+    afl_log_id:
+      whitelisted: true
+    afl_namespace:
+      whitelisted: true
+    afl_patrolled_by:
+      whitelisted: true
+    afl_rev_id:
+      whitelisted: true
+    afl_timestamp:
+      whitelisted: true
+    afl_title:
+      whitelisted: true
+    afl_user:
+      whitelisted: true
+    afl_user_text:
+      whitelisted: true
+    afl_var_dump:
+      whitelisted: true
+    afl_wiki:
+      whitelisted: true
 aft_article_feedback:
-  af_abuse_count:
-    whitelisted: true
-  af_activity_count:
-    whitelisted: true
-  af_bucket_id:
-    whitelisted: true
-  af_created:
-    whitelisted: true
-  af_cta_id:
-    whitelisted: true
-  af_experiment:
-    whitelisted: true
-  af_form_id:
-    whitelisted: true
-  af_has_comment:
-    whitelisted: true
-  af_helpful_count:
-    whitelisted: true
-  af_id:
-    whitelisted: true
-  af_is_autohide:
-    whitelisted: true
-  af_is_declined:
-    whitelisted: true
-  af_is_deleted:
-    whitelisted: true
-  af_is_featured:
-    whitelisted: true
-  af_is_hidden:
-    whitelisted: true
-  af_is_resolved:
-    whitelisted: true
-  af_is_undeleted:
-    whitelisted: true
-  af_is_unfeatured:
-    whitelisted: true
-  af_is_unhidden:
-    whitelisted: true
-  af_is_unrequested:
-    whitelisted: true
-  af_is_unresolved:
-    whitelisted: true
-  af_last_status:
-    whitelisted: true
-  af_last_status_notes:
-    whitelisted: true
-  af_last_status_timestamp:
-    whitelisted: true
-  af_last_status_user_id:
-    whitelisted: true
-  af_link_id:
-    whitelisted: true
-  af_net_helpfulness:
-    whitelisted: true
-  af_oversight_count:
-    whitelisted: true
-  af_page_id:
-    whitelisted: true
-  af_relevance_score:
-    whitelisted: true
-  af_relevance_sort:
-    whitelisted: true
-  af_revision_id:
-    whitelisted: true
-  af_suppress_count:
-    whitelisted: true
-  af_unhelpful_count:
-    whitelisted: true
-  af_user_anon_token:
-    whitelisted: true
-  af_user_id:
-    whitelisted: true
-  af_user_ip:
-    whitelisted: false
+  columns:
+    af_abuse_count:
+      whitelisted: true
+    af_activity_count:
+      whitelisted: true
+    af_bucket_id:
+      whitelisted: true
+    af_created:
+      whitelisted: true
+    af_cta_id:
+      whitelisted: true
+    af_experiment:
+      whitelisted: true
+    af_form_id:
+      whitelisted: true
+    af_has_comment:
+      whitelisted: true
+    af_helpful_count:
+      whitelisted: true
+    af_id:
+      whitelisted: true
+    af_is_autohide:
+      whitelisted: true
+    af_is_declined:
+      whitelisted: true
+    af_is_deleted:
+      whitelisted: true
+    af_is_featured:
+      whitelisted: true
+    af_is_hidden:
+      whitelisted: true
+    af_is_resolved:
+      whitelisted: true
+    af_is_undeleted:
+      whitelisted: true
+    af_is_unfeatured:
+      whitelisted: true
+    af_is_unhidden:
+      whitelisted: true
+    af_is_unrequested:
+      whitelisted: true
+    af_is_unresolved:
+      whitelisted: true
+    af_last_status:
+      whitelisted: true
+    af_last_status_notes:
+      whitelisted: true
+    af_last_status_timestamp:
+      whitelisted: true
+    af_last_status_user_id:
+      whitelisted: true
+    af_link_id:
+      whitelisted: true
+    af_net_helpfulness:
+      whitelisted: true
+    af_oversight_count:
+      whitelisted: true
+    af_page_id:
+      whitelisted: true
+    af_relevance_score:
+      whitelisted: true
+    af_relevance_sort:
+      whitelisted: true
+    af_revision_id:
+      whitelisted: true
+    af_suppress_count:
+      whitelisted: true
+    af_unhelpful_count:
+      whitelisted: true
+    af_user_anon_token:
+      whitelisted: true
+    af_user_id:
+      whitelisted: true
+    af_user_ip:
+      whitelisted: false
 archive:
-  ar_comment:
-    whitelisted: false
-  ar_deleted:
-    whitelisted: true
-  ar_flags:
-    whitelisted: true
-  ar_id:
-    whitelisted: true
-  ar_len:
-    condition: ar_deleted & 1
-    whitelisted: false
-  ar_minor_edit:
-    whitelisted: true
-  ar_namespace:
-    whitelisted: true
-  ar_page_id:
-    whitelisted: true
-  ar_parent_id:
-    whitelisted: true
-  ar_rev_id:
-    whitelisted: true
-  ar_sha1:
-    condition: ar_deleted & 1
-    whitelisted: false
-  ar_text:
-    whitelisted: false
-  ar_text_id:
-    condition: ar_deleted & 1
-    whitelisted: false
-  ar_timestamp:
-    whitelisted: true
-  ar_title:
-    whitelisted: true
-  ar_user:
-    condition: ar_deleted & 4
-    whitelisted: false
-  ar_user_text:
-    condition: ar_deleted & 4
-    whitelisted: false
+  columns:
+    ar_comment:
+      whitelisted: false
+    ar_deleted:
+      whitelisted: true
+    ar_flags:
+      whitelisted: true
+    ar_id:
+      whitelisted: true
+    ar_len:
+      condition: ar_deleted & 1
+      whitelisted: false
+    ar_minor_edit:
+      whitelisted: true
+    ar_namespace:
+      whitelisted: true
+    ar_page_id:
+      whitelisted: true
+    ar_parent_id:
+      whitelisted: true
+    ar_rev_id:
+      whitelisted: true
+    ar_sha1:
+      condition: ar_deleted & 1
+      whitelisted: false
+    ar_text:
+      whitelisted: false
+    ar_text_id:
+      condition: ar_deleted & 1
+      whitelisted: false
+    ar_timestamp:
+      whitelisted: true
+    ar_title:
+      whitelisted: true
+    ar_user:
+      condition: ar_deleted & 4
+      whitelisted: false
+    ar_user_text:
+      condition: ar_deleted & 4
+      whitelisted: false
 archive_userindex:
-  __where__: ar_deleted & 4 = 0
-  ar_comment:
-    whitelisted: false
-  ar_deleted:
-    whitelisted: true
-  ar_flags:
-    whitelisted: true
-  ar_id:
-    whitelisted: true
-  ar_len:
-    condition: ar_deleted & 1
-    whitelisted: false
-  ar_minor_edit:
-    whitelisted: true
-  ar_namespace:
-    whitelisted: true
-  ar_page_id:
-    whitelisted: true
-  ar_parent_id:
-    whitelisted: true
-  ar_rev_id:
-    whitelisted: true
-  ar_sha1:
-    condition: ar_deleted & 1
-    whitelisted: false
-  ar_text:
-    whitelisted: false
-  ar_text_id:
-    condition: ar_deleted & 1
-    whitelisted: false
-  ar_timestamp:
-    whitelisted: true
-  ar_title:
-    whitelisted: true
-  ar_user:
-    condition: ar_deleted & 4
-    whitelisted: false
-  ar_user_text:
-    condition: ar_deleted & 4
-    whitelisted: false
+  columns:
+    ar_comment:
+      whitelisted: false
+    ar_deleted:
+      whitelisted: true
+    ar_flags:
+      whitelisted: true
+    ar_id:
+      whitelisted: true
+    ar_len:
+      condition: ar_deleted & 1
+      whitelisted: false
+    ar_minor_edit:
+      whitelisted: true
+    ar_namespace:
+      whitelisted: true
+    ar_page_id:
+      whitelisted: true
+    ar_parent_id:
+      whitelisted: true
+    ar_rev_id:
+      whitelisted: true
+    ar_sha1:
+      condition: ar_deleted & 1
+      whitelisted: false
+    ar_text:
+      whitelisted: false
+    ar_text_id:
+      condition: ar_deleted & 1
+      whitelisted: false
+    ar_timestamp:
+      whitelisted: true
+    ar_title:
+      whitelisted: true
+    ar_user:
+      condition: ar_deleted & 4
+      whitelisted: false
+    ar_user_text:
+      condition: ar_deleted & 4
+      whitelisted: false
+  where: ar_deleted & 4 = 0
 filearchive:
-  fa_archive_name:
-    whitelisted: true
-  fa_bits:
-    condition: fa_deleted & 1
-    whitelisted: false
-  fa_deleted:
-    whitelisted: true
-  fa_deleted_reason:
-    whitelisted: true
-  fa_deleted_timestamp:
-    whitelisted: true
-  fa_deleted_user:
-    whitelisted: true
-  fa_description:
-    condition: fa_deleted & 2
-    whitelisted: false
-  fa_height:
-    condition: fa_deleted & 1
-    whitelisted: false
-  fa_id:
-    whitelisted: true
-  fa_major_mime:
-    condition: fa_deleted & 1
-    whitelisted: false
-  fa_media_type:
-    condition: fa_deleted & 1
-    whitelisted: false
-  fa_metadata:
-    condition: fa_deleted & 1
-    whitelisted: false
-  fa_minor_mime:
-    whitelisted: true
-  fa_name:
-    condition: fa_deleted & 1
-    whitelisted: false
-  fa_sha1:
-    condition: fa_deleted & 1
-    whitelisted: false
-  fa_size:
-    condition: fa_deleted & 1
-    whitelisted: false
-  fa_storage_group:
-    whitelisted: true
-  fa_storage_key:
-    whitelisted: false
-  fa_timestamp:
-    whitelisted: true
-  fa_user:
-    condition: fa_deleted & 4
-    whitelisted: false
-  fa_user_text:
-    condition: fa_deleted & 4
-    whitelisted: false
-  fa_width:
-    condition: fa_deleted & 1
-    whitelisted: false
+  columns:
+    fa_archive_name:
+      whitelisted: true
+    fa_bits:
+      condition: fa_deleted & 1
+      whitelisted: false
+    fa_deleted:
+      whitelisted: true
+    fa_deleted_reason:
+      whitelisted: true
+    fa_deleted_timestamp:
+      whitelisted: true
+    fa_deleted_user:
+      whitelisted: true
+    fa_description:
+      condition: fa_deleted & 2
+      whitelisted: false
+    fa_height:
+      condition: fa_deleted & 1
+      whitelisted: false
+    fa_id:
+      whitelisted: true
+    fa_major_mime:
+      condition: fa_deleted & 1
+      whitelisted: false
+    fa_media_type:
+      condition: fa_deleted & 1
+      whitelisted: false
+    fa_metadata:
+      condition: fa_deleted & 1
+      whitelisted: false
+    fa_minor_mime:
+      whitelisted: true
+    fa_name:
+      condition: fa_deleted & 1
+      whitelisted: false
+    fa_sha1:
+      condition: fa_deleted & 1
+      whitelisted: false
+    fa_size:
+      condition: fa_deleted & 1
+      whitelisted: false
+    fa_storage_group:
+      whitelisted: true
+    fa_storage_key:
+      whitelisted: false
+    fa_timestamp:
+      whitelisted: true
+    fa_user:
+      condition: fa_deleted & 4
+      whitelisted: false
+    fa_user_text:
+      condition: fa_deleted & 4
+      whitelisted: false
+    fa_width:
+      condition: fa_deleted & 1
+      whitelisted: false
 filearchive_userindex:
-  __where__: fa_deleted & 4 = 0
-  fa_archive_name:
-    whitelisted: true
-  fa_bits:
-    condition: fa_deleted & 1
-    whitelisted: false
-  fa_deleted:
-    whitelisted: true
-  fa_deleted_reason:
-    whitelisted: true
-  fa_deleted_timestamp:
-    whitelisted: true
-  fa_deleted_user:
-    whitelisted: true
-  fa_description:
-    condition: fa_deleted & 2
-    whitelisted: false
-  fa_height:
-    condition: fa_deleted & 1
-    whitelisted: false
-  fa_id:
-    whitelisted: true
-  fa_major_mime:
-    condition: fa_deleted & 1
-    whitelisted: false
-  fa_media_type:
-    condition: fa_deleted & 1
-    whitelisted: false
-  fa_metadata:
-    condition: fa_deleted & 1
-    whitelisted: false
-  fa_minor_mime:
-    whitelisted: true
-  fa_name:
-    condition: fa_deleted & 1
-    whitelisted: false
-  fa_sha1:
-    condition: fa_deleted & 1
-    whitelisted: false
-  fa_size:
-    condition: fa_deleted & 1
-    whitelisted: false
-  fa_storage_group:
-    whitelisted: true
-  fa_storage_key:
-    whitelisted: false
-  fa_timestamp:
-    whitelisted: true
-  fa_user:
-    condition: fa_deleted & 4
-    whitelisted: false
-  fa_user_text:
-    condition: fa_deleted & 4
-    whitelisted: false
-  fa_width:
-    condition: fa_deleted & 1
-    whitelisted: false
+  columns:
+    fa_archive_name:
+      whitelisted: true
+    fa_bits:
+      condition: fa_deleted & 1
+      whitelisted: false
+    fa_deleted:
+      whitelisted: true
+    fa_deleted_reason:
+      whitelisted: true
+    fa_deleted_timestamp:
+      whitelisted: true
+    fa_deleted_user:
+      whitelisted: true
+    fa_description:
+      condition: fa_deleted & 2
+      whitelisted: false
+    fa_height:
+      condition: fa_deleted & 1
+      whitelisted: false
+    fa_id:
+      whitelisted: true
+    fa_major_mime:
+      condition: fa_deleted & 1
+      whitelisted: false
+    fa_media_type:
+      condition: fa_deleted & 1
+      whitelisted: false
+    fa_metadata:
+      condition: fa_deleted & 1
+      whitelisted: false
+    fa_minor_mime:
+      whitelisted: true
+    fa_name:
+      condition: fa_deleted & 1
+      whitelisted: false
+    fa_sha1:
+      condition: fa_deleted & 1
+      whitelisted: false
+    fa_size:
+      condition: fa_deleted & 1
+      whitelisted: false
+    fa_storage_group:
+      whitelisted: true
+    fa_storage_key:
+      whitelisted: false
+    fa_timestamp:
+      whitelisted: true
+    fa_user:
+      condition: fa_deleted & 4
+      whitelisted: false
+    fa_user_text:
+      condition: fa_deleted & 4
+      whitelisted: false
+    fa_width:
+      condition: fa_deleted & 1
+      whitelisted: false
+  where: fa_deleted & 4 = 0
 ipblocks:
-  __where__: ipb_deleted = 0
-  ipb_address:
-    condition: ipb_auto != 0
-    whitelisted: false
-  ipb_allow_usertalk:
-    whitelisted: true
-  ipb_anon_only:
-    whitelisted: true
-  ipb_auto:
-    whitelisted: true
-  ipb_block_email:
-    whitelisted: true
-  ipb_by:
-    whitelisted: true
-  ipb_by_text:
-    whitelisted: true
-  ipb_create_account:
-    whitelisted: true
-  ipb_deleted:
-    replacewith: 0
-    whitelisted: false
-  ipb_enable_autoblock:
-    whitelisted: true
-  ipb_expiry:
-    whitelisted: true
-  ipb_id:
-    whitelisted: true
-  ipb_parent_block_id:
-    whitelisted: true
-  ipb_range_end:
-    condition: ipb_auto != 0
-    whitelisted: false
-  ipb_range_start:
-    condition: ipb_auto != 0
-    whitelisted: false
-  ipb_reason:
-    whitelisted: true
-  ipb_timestamp:
-    whitelisted: true
-  ipb_user:
-    whitelisted: true
+  columns:
+    ipb_address:
+      condition: ipb_auto != 0
+      whitelisted: false
+    ipb_allow_usertalk:
+      whitelisted: true
+    ipb_anon_only:
+      whitelisted: true
+    ipb_auto:
+      whitelisted: true
+    ipb_block_email:
+      whitelisted: true
+    ipb_by:
+      whitelisted: true
+    ipb_by_text:
+      whitelisted: true
+    ipb_create_account:
+      whitelisted: true
+    ipb_deleted:
+      replacewith: 0
+      whitelisted: false
+    ipb_enable_autoblock:
+      whitelisted: true
+    ipb_expiry:
+      whitelisted: true
+    ipb_id:
+      whitelisted: true
+    ipb_parent_block_id:
+      whitelisted: true
+    ipb_range_end:
+      condition: ipb_auto != 0
+      whitelisted: false
+    ipb_range_start:
+      condition: ipb_auto != 0
+      whitelisted: false
+    ipb_reason:
+      whitelisted: true
+    ipb_timestamp:
+      whitelisted: true
+    ipb_user:
+      whitelisted: true
+  where: ipb_deleted = 0
 ipblocks_ipindex:
-  __where__: ipb_deleted = 0 AND ipb_auto = 0
-  ipb_address:
-    condition: ipb_auto != 0
-    whitelisted: false
-  ipb_allow_usertalk:
-    whitelisted: true
-  ipb_anon_only:
-    whitelisted: true
-  ipb_auto:
-    whitelisted: true
-  ipb_block_email:
-    whitelisted: true
-  ipb_by:
-    whitelisted: true
-  ipb_by_text:
-    whitelisted: true
-  ipb_create_account:
-    whitelisted: true
-  ipb_deleted:
-    replacewith: 0
-    whitelisted: false
-  ipb_enable_autoblock:
-    whitelisted: true
-  ipb_expiry:
-    whitelisted: true
-  ipb_id:
-    whitelisted: true
-  ipb_parent_block_id:
-    whitelisted: true
-  ipb_range_end:
-    condition: ipb_auto != 0
-    whitelisted: false
-  ipb_range_start:
-    condition: ipb_auto != 0
-    whitelisted: false
-  ipb_reason:
-    whitelisted: true
-  ipb_timestamp:
-    whitelisted: true
-  ipb_user:
-    whitelisted: true
+  columns:
+    ipb_address:
+      condition: ipb_auto != 0
+      whitelisted: false
+    ipb_allow_usertalk:
+      whitelisted: true
+    ipb_anon_only:
+      whitelisted: true
+    ipb_auto:
+      whitelisted: true
+    ipb_block_email:
+      whitelisted: true
+    ipb_by:
+      whitelisted: true
+    ipb_by_text:
+      whitelisted: true
+    ipb_create_account:
+      whitelisted: true
+    ipb_deleted:
+      replacewith: 0
+      whitelisted: false
+    ipb_enable_autoblock:
+      whitelisted: true
+    ipb_expiry:
+      whitelisted: true
+    ipb_id:
+      whitelisted: true
+    ipb_parent_block_id:
+      whitelisted: true
+    ipb_range_end:
+      condition: ipb_auto != 0
+      whitelisted: false
+    ipb_range_start:
+      condition: ipb_auto != 0
+      whitelisted: false
+    ipb_reason:
+      whitelisted: true
+    ipb_timestamp:
+      whitelisted: true
+    ipb_user:
+      whitelisted: true
+  where: ipb_deleted = 0 AND ipb_auto = 0
 logging:
-  __where__: logtype != 'suppress'
-  log_action:
-    condition: log_deleted & 1
-    whitelisted: false
-  log_comment:
-    condition: log_deleted & 2
-    whitelisted: false
-  log_deleted:
-    whitelisted: true
-  log_id:
-    whitelisted: true
-  log_namespace:
-    condition: log_deleted & 1
-    whitelisted: false
-  log_page:
-    condition: log_deleted & 1
-    whitelisted: false
-  log_params:
-    condition: log_deleted & 1
-    whitelisted: false
-  log_timestamp:
-    whitelisted: true
-  log_title:
-    condition: log_deleted & 1
-    whitelisted: false
-  log_type:
-    whitelisted: true
-  log_user:
-    condition: log_deleted & 4
-    whitelisted: false
-  log_user_text:
-    condition: log_deleted & 4
-    whitelisted: false
+  columns:
+    log_action:
+      condition: log_deleted & 1
+      whitelisted: false
+    log_comment:
+      condition: log_deleted & 2
+      whitelisted: false
+    log_deleted:
+      whitelisted: true
+    log_id:
+      whitelisted: true
+    log_namespace:
+      condition: log_deleted & 1
+      whitelisted: false
+    log_page:
+      condition: log_deleted & 1
+      whitelisted: false
+    log_params:
+      condition: log_deleted & 1
+      whitelisted: false
+    log_timestamp:
+      whitelisted: true
+    log_title:
+      condition: log_deleted & 1
+      whitelisted: false
+    log_type:
+      whitelisted: true
+    log_user:
+      condition: log_deleted & 4
+      whitelisted: false
+    log_user_text:
+      condition: log_deleted & 4
+      whitelisted: false
+  where: logtype != 'suppress'
 logging_logindex:
-  __where__: log_deleted & 0 = 0 AND logtype != 'suppress'
-  log_action:
-    condition: log_deleted & 1
-    whitelisted: false
-  log_comment:
-    condition: log_deleted & 2
-    whitelisted: false
-  log_deleted:
-    whitelisted: true
-  log_id:
-    whitelisted: true
-  log_namespace:
-    condition: log_deleted & 1
-    whitelisted: false
-  log_page:
-    condition: log_deleted & 1
-    whitelisted: false
-  log_params:
-    condition: log_deleted & 1
-    whitelisted: false
-  log_timestamp:
-    whitelisted: true
-  log_title:
-    condition: log_deleted & 1
-    whitelisted: false
-  log_type:
-    whitelisted: true
-  log_user:
-    condition: log_deleted & 4
-    whitelisted: false
-  log_user_text:
-    condition: log_deleted & 4
-    whitelisted: false
+  columns:
+    log_action:
+      condition: log_deleted & 1
+      whitelisted: false
+    log_comment:
+      condition: log_deleted & 2
+      whitelisted: false
+    log_deleted:
+      whitelisted: true
+    log_id:
+      whitelisted: true
+    log_namespace:
+      condition: log_deleted & 1
+      whitelisted: false
+    log_page:
+      condition: log_deleted & 1
+      whitelisted: false
+    log_params:
+      condition: log_deleted & 1
+      whitelisted: false
+    log_timestamp:
+      whitelisted: true
+    log_title:
+      condition: log_deleted & 1
+      whitelisted: false
+    log_type:
+      whitelisted: true
+    log_user:
+      condition: log_deleted & 4
+      whitelisted: false
+    log_user_text:
+      condition: log_deleted & 4
+      whitelisted: false
+  where: log_deleted & 0 = 0 AND logtype != 'suppress'
 logging_userindex:
-  __where__: log_deleted & 4 = 0 AND log_type != 'suppress'
-  log_action:
-    condition: log_deleted & 1
-    whitelisted: false
-  log_comment:
-    condition: log_deleted & 2
-    whitelisted: false
-  log_deleted:
-    whitelisted: true
-  log_id:
-    whitelisted: true
-  log_namespace:
-    condition: log_deleted & 1
-    whitelisted: false
-  log_page:
-    condition: log_deleted & 1
-    whitelisted: false
-  log_params:
-    condition: log_deleted & 1
-    whitelisted: false
-  log_timestamp:
-    whitelisted: true
-  log_title:
-    condition: log_deleted & 1
-    whitelisted: false
-  log_type:
-    whitelisted: true
-  log_user:
-    condition: log_deleted & 4
-    whitelisted: false
-  log_user_text:
-    condition: log_deleted & 4
-    whitelisted: false
+  columns:
+    log_action:
+      condition: log_deleted & 1
+      whitelisted: false
+    log_comment:
+      condition: log_deleted & 2
+      whitelisted: false
+    log_deleted:
+      whitelisted: true
+    log_id:
+      whitelisted: true
+    log_namespace:
+      condition: log_deleted & 1
+      whitelisted: false
+    log_page:
+      condition: log_deleted & 1
+      whitelisted: false
+    log_params:
+      condition: log_deleted & 1
+      whitelisted: false
+    log_timestamp:
+      whitelisted: true
+    log_title:
+      condition: log_deleted & 1
+      whitelisted: false
+    log_type:
+      whitelisted: true
+    log_user:
+      condition: log_deleted & 4
+      whitelisted: false
+    log_user_text:
+      condition: log_deleted & 4
+      whitelisted: false
+  where: log_deleted & 4 = 0 AND log_type != 'suppress'
 mark_as_helpful:
-  mah_id:
-    whitelisted: true
-  mah_item:
-    whitelisted: true
-  mah_locale:
-    whitelisted: false
-  mah_namespace:
-    whitelisted: true
-  mah_system_type:
-    whitelisted: false
-  mah_timestamp:
-    whitelisted: true
-  mah_title:
-    whitelisted: true
-  mah_type:
-    whitelisted: true
-  mah_user_agent:
-    whitelisted: false
-  mah_user_editcount:
-    whitelisted: true
-  mah_user_id:
-    whitelisted: true
+  columns:
+    mah_id:
+      whitelisted: true
+    mah_item:
+      whitelisted: true
+    mah_locale:
+      whitelisted: false
+    mah_namespace:
+      whitelisted: true
+    mah_system_type:
+      whitelisted: false
+    mah_timestamp:
+      whitelisted: true
+    mah_title:
+      whitelisted: true
+    mah_type:
+      whitelisted: true
+    mah_user_agent:
+      whitelisted: false
+    mah_user_editcount:
+      whitelisted: true
+    mah_user_id:
+      whitelisted: true
 oldimage:
-  oi_archive_name:
-    whitelisted: true
-  oi_bits:
-    whitelisted: true
-  oi_deleted:
-    whitelisted: true
-  oi_description:
-    condition: oi_deleted & 2
-    whitelisted: false
-  oi_height:
-    whitelisted: true
-  oi_major_mime:
-    whitelisted: true
-  oi_media_type:
-    whitelisted: true
-  oi_metadata:
-    whitelisted: true
-  oi_minor_mime:
-    whitelisted: true
-  oi_name:
-    whitelisted: true
-  oi_sha1:
-    whitelisted: true
-  oi_size:
-    whitelisted: true
-  oi_timestamp:
-    whitelisted: true
-  oi_user:
-    condition: oi_deleted & 4
-    whitelisted: false
-  oi_user_text:
-    condition: oi_deleted & 4
-    whitelisted: false
-  oi_width:
-    whitelisted: true
+  columns:
+    oi_archive_name:
+      whitelisted: true
+    oi_bits:
+      whitelisted: true
+    oi_deleted:
+      whitelisted: true
+    oi_description:
+      condition: oi_deleted & 2
+      whitelisted: false
+    oi_height:
+      whitelisted: true
+    oi_major_mime:
+      whitelisted: true
+    oi_media_type:
+      whitelisted: true
+    oi_metadata:
+      whitelisted: true
+    oi_minor_mime:
+      whitelisted: true
+    oi_name:
+      whitelisted: true
+    oi_sha1:
+      whitelisted: true
+    oi_size:
+      whitelisted: true
+    oi_timestamp:
+      whitelisted: true
+    oi_user:
+      condition: oi_deleted & 4
+      whitelisted: false
+    oi_user_text:
+      condition: oi_deleted & 4
+      whitelisted: false
+    oi_width:
+      whitelisted: true
 oldimage_userindex:
-  __where__: oi_deleted & 4 = 0
-  oi_archive_name:
-    whitelisted: true
-  oi_bits:
-    whitelisted: true
-  oi_deleted:
-    whitelisted: true
-  oi_description:
-    condition: oi_deleted & 2
-    whitelisted: false
-  oi_height:
-    whitelisted: true
-  oi_major_mime:
-    whitelisted: true
-  oi_media_type:
-    whitelisted: true
-  oi_metadata:
-    whitelisted: true
-  oi_minor_mime:
-    whitelisted: true
-  oi_name:
-    whitelisted: true
-  oi_sha1:
-    whitelisted: true
-  oi_size:
-    whitelisted: true
-  oi_timestamp:
-    whitelisted: true
-  oi_user:
-    condition: oi_deleted & 4
-    whitelisted: false
-  oi_user_text:
-    condition: oi_deleted & 4
-    whitelisted: false
-  oi_width:
-    whitelisted: true
+  columns:
+    oi_archive_name:
+      whitelisted: true
+    oi_bits:
+      whitelisted: true
+    oi_deleted:
+      whitelisted: true
+    oi_description:
+      condition: oi_deleted & 2
+      whitelisted: false
+    oi_height:
+      whitelisted: true
+    oi_major_mime:
+      whitelisted: true
+    oi_media_type:
+      whitelisted: true
+    oi_metadata:
+      whitelisted: true
+    oi_minor_mime:
+      whitelisted: true
+    oi_name:
+      whitelisted: true
+    oi_sha1:
+      whitelisted: true
+    oi_size:
+      whitelisted: true
+    oi_timestamp:
+      whitelisted: true
+    oi_user:
+      condition: oi_deleted & 4
+      whitelisted: false
+    oi_user_text:
+      condition: oi_deleted & 4
+      whitelisted: false
+    oi_width:
+      whitelisted: true
+  where: oi_deleted & 4 = 0
 recentchanges:
-  rc_bot:
-    whitelisted: true
-  rc_comment:
-    condition: rc_deleted & 2
-    whitelisted: false
-  rc_cur_id:
-    whitelisted: true
-  rc_cur_time:
-    whitelisted: true
-  rc_deleted:
-    whitelisted: true
-  rc_id:
-    whitelisted: true
-  rc_ip:
-    whitelisted: true
-  rc_last_oldid:
-    whitelisted: true
-  rc_log_action:
-    whitelisted: true
-  rc_log_type:
-    whitelisted: true
-  rc_logid:
-    whitelisted: true
-  rc_minor:
-    whitelisted: true
-  rc_namespace:
-    whitelisted: true
-  rc_new:
-    whitelisted: true
-  rc_new_len:
-    whitelisted: true
-  rc_old_len:
-    whitelisted: true
-  rc_params:
-    whitelisted: true
-  rc_patrolled:
-    whitelisted: true
-  rc_source:
-    whitelisted: true
-  rc_this_oldid:
-    whitelisted: true
-  rc_timestamp:
-    whitelisted: true
-  rc_title:
-    whitelisted: true
-  rc_type:
-    whitelisted: true
-  rc_user:
-    condition: rc_deleted & 4
-    whitelisted: false
-  rc_user_text:
-    condition: rc_deleted & 4
-    whitelisted: false
+  columns:
+    rc_bot:
+      whitelisted: true
+    rc_comment:
+      condition: rc_deleted & 2
+      whitelisted: false
+    rc_cur_id:
+      whitelisted: true
+    rc_cur_time:
+      whitelisted: true
+    rc_deleted:
+      whitelisted: true
+    rc_id:
+      whitelisted: true
+    rc_ip:
+      whitelisted: true
+    rc_last_oldid:
+      whitelisted: true
+    rc_log_action:
+      whitelisted: true
+    rc_log_type:
+      whitelisted: true
+    rc_logid:
+      whitelisted: true
+    rc_minor:
+      whitelisted: true
+    rc_namespace:
+      whitelisted: true
+    rc_new:
+      whitelisted: true
+    rc_new_len:
+      whitelisted: true
+    rc_old_len:
+      whitelisted: true
+    rc_params:
+      whitelisted: true
+    rc_patrolled:
+      whitelisted: true
+    rc_source:
+      whitelisted: true
+    rc_this_oldid:
+      whitelisted: true
+    rc_timestamp:
+      whitelisted: true
+    rc_title:
+      whitelisted: true
+    rc_type:
+      whitelisted: true
+    rc_user:
+      condition: rc_deleted & 4
+      whitelisted: false
+    rc_user_text:
+      condition: rc_deleted & 4
+      whitelisted: false
 recentchanges_userindex:
-  __where__: rc_deleted & 4 = 0
-  rc_bot:
-    whitelisted: true
-  rc_comment:
-    condition: rc_deleted & 2
-    whitelisted: false
-  rc_cur_id:
-    whitelisted: true
-  rc_cur_time:
-    whitelisted: true
-  rc_deleted:
-    whitelisted: true
-  rc_id:
-    whitelisted: true
-  rc_ip:
-    whitelisted: true
-  rc_last_oldid:
-    whitelisted: true
-  rc_log_action:
-    whitelisted: true
-  rc_log_type:
-    whitelisted: true
-  rc_logid:
-    whitelisted: true
-  rc_minor:
-    whitelisted: true
-  rc_namespace:
-    whitelisted: true
-  rc_new:
-    whitelisted: true
-  rc_new_len:
-    whitelisted: true
-  rc_old_len:
-    whitelisted: true
-  rc_params:
-    whitelisted: true
-  rc_patrolled:
-    whitelisted: true
-  rc_source:
-    whitelisted: true
-  rc_this_oldid:
-    whitelisted: true
-  rc_timestamp:
-    whitelisted: true
-  rc_title:
-    whitelisted: true
-  rc_type:
-    whitelisted: true
-  rc_user:
-    condition: rc_deleted & 4
-    whitelisted: false
-  rc_user_text:
-    condition: rc_deleted & 4
-    whitelisted: false
+  columns:
+    rc_bot:
+      whitelisted: true
+    rc_comment:
+      condition: rc_deleted & 2
+      whitelisted: false
+    rc_cur_id:
+      whitelisted: true
+    rc_cur_time:
+      whitelisted: true
+    rc_deleted:
+      whitelisted: true
+    rc_id:
+      whitelisted: true
+    rc_ip:
+      whitelisted: true
+    rc_last_oldid:
+      whitelisted: true
+    rc_log_action:
+      whitelisted: true
+    rc_log_type:
+      whitelisted: true
+    rc_logid:
+      whitelisted: true
+    rc_minor:
+      whitelisted: true
+    rc_namespace:
+      whitelisted: true
+    rc_new:
+      whitelisted: true
+    rc_new_len:
+      whitelisted: true
+    rc_old_len:
+      whitelisted: true
+    rc_params:
+      whitelisted: true
+    rc_patrolled:
+      whitelisted: true
+    rc_source:
+      whitelisted: true
+    rc_this_oldid:
+      whitelisted: true
+    rc_timestamp:
+      whitelisted: true
+    rc_title:
+      whitelisted: true
+    rc_type:
+      whitelisted: true
+    rc_user:
+      condition: rc_deleted & 4
+      whitelisted: false
+    rc_user_text:
+      condition: rc_deleted & 4
+      whitelisted: false
+  where: rc_deleted & 4 = 0
 revision:
-  rev_comment:
-    condition: rev_deleted & 2
-    whitelisted: false
-  rev_content_format:
-    whitelisted: true
-  rev_content_model:
-    whitelisted: true
-  rev_deleted:
-    whitelisted: true
-  rev_id:
-    whitelisted: true
-  rev_len:
-    condition: rev_deleted & 1
-    whitelisted: false
-  rev_minor_edit:
-    whitelisted: true
-  rev_page:
-    whitelisted: true
-  rev_parent_id:
-    whitelisted: true
-  rev_sha1:
-    condition: rev_deleted & 1
-    whitelisted: false
-  rev_text_id:
-    condition: rev_deleted & 1
-    whitelisted: false
-  rev_timestamp:
-    whitelisted: true
-  rev_user:
-    condition: rev_deleted & 4
-    whitelisted: false
-  rev_user_text:
-    condition: rev_deleted & 4
-    whitelisted: false
+  columns:
+    rev_comment:
+      condition: rev_deleted & 2
+      whitelisted: false
+    rev_content_format:
+      whitelisted: true
+    rev_content_model:
+      whitelisted: true
+    rev_deleted:
+      whitelisted: true
+    rev_id:
+      whitelisted: true
+    rev_len:
+      condition: rev_deleted & 1
+      whitelisted: false
+    rev_minor_edit:
+      whitelisted: true
+    rev_page:
+      whitelisted: true
+    rev_parent_id:
+      whitelisted: true
+    rev_sha1:
+      condition: rev_deleted & 1
+      whitelisted: false
+    rev_text_id:
+      condition: rev_deleted & 1
+      whitelisted: false
+    rev_timestamp:
+      whitelisted: true
+    rev_user:
+      condition: rev_deleted & 4
+      whitelisted: false
+    rev_user_text:
+      condition: rev_deleted & 4
+      whitelisted: false
 user:
-  user_editcount:
-    whitelisted: true
-  user_email:
-    whitelisted: false
-  user_email_authenticated:
-    whitelisted: false
-  user_email_token:
-    whitelisted: false
-  user_email_token_expires:
-    whitelisted: false
-  user_id:
-    whitelisted: true
-  user_name:
-    whitelisted: true
-  user_newpass_time:
-    whitelisted: false
-  user_newpassword:
-    whitelisted: false
-  user_options:
-    whitelisted: false
-  user_password:
-    whitelisted: false
-  user_password_expires:
-    whitelisted: false
-  user_real_name:
-    whitelisted: true
-  user_registration:
-    whitelisted: false
-  user_token:
-    whitelisted: false
-  user_touched:
-    whitelisted: false
+  columns:
+    user_editcount:
+      whitelisted: true
+    user_email:
+      whitelisted: false
+    user_email_authenticated:
+      whitelisted: false
+    user_email_token:
+      whitelisted: false
+    user_email_token_expires:
+      whitelisted: false
+    user_id:
+      whitelisted: true
+    user_name:
+      whitelisted: true
+    user_newpass_time:
+      whitelisted: false
+    user_newpassword:
+      whitelisted: false
+    user_options:
+      whitelisted: false
+    user_password:
+      whitelisted: false
+    user_password_expires:
+      whitelisted: false
+    user_real_name:
+      whitelisted: true
+    user_registration:
+      whitelisted: false
+    user_token:
+      whitelisted: false
+    user_touched:
+      whitelisted: false
 user_old:
-  user_email:
-    whitelisted: false
-  user_id:
-    whitelisted: true
-  user_name:
-    whitelisted: true
-  user_newpassword:
-    whitelisted: false
-  user_newtalk:
-    whitelisted: false
-  user_options:
-    whitelisted: false
-  user_password:
-    whitelisted: false
-  user_real_name:
-    whitelisted: true
-  user_token:
-    whitelisted: false
-  user_touched:
-    whitelisted: false
+  columns:
+    user_email:
+      whitelisted: false
+    user_id:
+      whitelisted: true
+    user_name:
+      whitelisted: true
+    user_newpassword:
+      whitelisted: false
+    user_newtalk:
+      whitelisted: false
+    user_options:
+      whitelisted: false
+    user_password:
+      whitelisted: false
+    user_real_name:
+      whitelisted: true
+    user_token:
+      whitelisted: false
+    user_touched:
+      whitelisted: false
+user_properties:
+  columns:
+    up_property:
+      whitelisted: true
+    up_user:
+      whitelisted: true
+    up_value:
+      whitelisted: true
+  where: up_property in ('disablemail', 'fancysig', 'gender', 'language', 'nickname',
+    'skin', 'timecorrection', 'variant')
