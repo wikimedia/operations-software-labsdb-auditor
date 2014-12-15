@@ -66,4 +66,4 @@ for name, table in tables.items():
         tabledata[columnname] = {'whitelisted': True}
     schemadata[name] = tabledata
 
-yaml.dump(schemadata, open('tableschema.yaml', 'w'))
+yaml.dump(schemadata, open('tableschema.yaml', 'w'), default_flow_style=False)
