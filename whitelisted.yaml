@@ -1,0 +1,752 @@
+abuse_filter_action:
+  columns:
+  - afa_filter
+  - afa_parameters
+  - afa_consequence
+abuse_filter_history:
+  columns:
+  - afh_user
+  - afh_user_text
+  - afh_id
+  - afh_actions
+  - afh_public_comments
+  - afh_changed_fields
+  - afh_group
+  - afh_deleted
+  - afh_filter
+  - afh_flags
+  - afh_pattern
+  - afh_comments
+  - afh_timestamp
+aft_article_answer:
+  columns:
+  - aa_response_rating
+  - aat_id
+  - aa_response_boolean
+  - aa_feedback_id
+  - aa_response_option_id
+  - aa_field_id
+  - aa_response_text
+aft_article_answer_text:
+  columns:
+  - aat_response_text
+  - aat_id
+aft_article_feedback_properties:
+  columns:
+  - afp_key
+  - afp_value_text
+  - afp_feedback_id
+  - afp_value_int
+aft_article_feedback_ratings_rollup:
+  columns:
+  - arr_count
+  - arr_field_id
+  - arr_total
+  - arr_page_id
+aft_article_feedback_select_rollup:
+  columns:
+  - afsr_count
+  - afsr_field_id
+  - afsr_page_id
+  - afsr_option_id
+  - afsr_total
+aft_article_field:
+  columns:
+  - afi_id
+  - afi_bucket_id
+  - afi_name
+  - afi_data_type
+  - afi_group_id
+aft_article_field_group:
+  columns:
+  - afg_name
+  - afg_id
+aft_article_field_option:
+  columns:
+  - afo_option_id
+  - afo_name
+  - afo_field_id
+aft_article_filter_count:
+  columns:
+  - afc_filter_count
+  - afc_filter_name
+  - afc_page_id
+aft_article_revision_feedback_ratings_rollup:
+  columns:
+  - afrr_field_id
+  - afrr_revision_id
+  - afrr_total
+  - afrr_count
+  - afrr_page_id
+aft_article_revision_feedback_select_rollup:
+  columns:
+  - arfsr_count
+  - arfsr_revision_id
+  - arfsr_option_id
+  - arfsr_page_id
+  - arfsr_field_id
+  - arfsr_total
+article_assessment:
+  columns:
+  - aa_rating_id
+  - aa_revision
+  - aa_user_text
+  - aa_timestamp
+  - aa_page_id
+  - aa_user_anon_token
+  - aa_user_id
+  - aa_rating_value
+article_assessment_pages:
+  columns:
+  - aap_page_id
+  - aap_count
+  - aap_total
+  - aap_rating_id
+article_assessment_ratings:
+  columns:
+  - aar_id
+  - aar_rating
+article_feedback:
+  columns:
+  - aa_rating_id
+  - aa_revision
+  - aa_user_text
+  - aa_timestamp
+  - aa_page_id
+  - aa_user_anon_token
+  - aa_user_id
+  - aa_rating_value
+  - aa_design_bucket
+article_feedback_pages:
+  columns:
+  - aap_page_id
+  - aap_count
+  - aap_total
+  - aap_rating_id
+article_feedback_properties:
+  columns:
+  - afp_value
+  - afp_key
+  - afp_revision
+  - afp_value_text
+  - afp_user_anon_token
+  - afp_user_text
+article_feedback_ratings:
+  columns:
+  - aar_id
+  - aar_rating
+article_feedback_revisions:
+  columns:
+  - afr_page_id
+  - afr_count
+  - afr_revision
+  - afr_rating_id
+  - afr_total
+article_feedback_stats:
+  columns:
+  - afs_stats_type_id
+  - afs_ts
+  - afs_data
+  - afs_orderable_data
+  - afs_page_id
+article_feedback_stats_types:
+  columns:
+  - afst_type
+  - afst_id
+category:
+  columns:
+  - cat_pages
+  - cat_id
+  - cat_subcats
+  - cat_files
+  - cat_title
+categorylinks:
+  columns:
+  - cl_sortkey
+  - cl_to
+  - cl_from
+  - cl_sortkey_prefix
+  - cl_timestamp
+  - cl_collation
+  - cl_type
+change_tag:
+  columns:
+  - ct_rev_id
+  - ct_params
+  - ct_log_id
+  - ct_tag
+  - ct_rc_id
+ep_articles:
+  columns:
+  - article_page_id
+  - article_course_id
+  - article_user_id
+  - article_id
+  - article_page_title
+  - article_reviewers
+ep_cas:
+  columns:
+  - ca_id
+  - ca_visible
+  - ca_user_id
+  - ca_bio
+  - ca_photo
+ep_courses:
+  columns:
+  - course_oa_count
+  - course_title
+  - course_org_id
+  - course_touched
+  - course_field
+  - course_online_ambs
+  - course_id
+  - course_name
+  - course_lang
+  - course_term
+  - course_description
+  - course_end
+  - course_instructor_count
+  - course_start
+  - course_level
+  - course_campus_ambs
+  - course_student_count
+  - course_ca_count
+  - course_students
+  - course_instructors
+  - course_token
+ep_events:
+  columns:
+  - event_user_id
+  - event_type
+  - event_time
+  - event_id
+  - event_info
+  - event_course_id
+ep_instructors:
+  columns:
+  - instructor_user_id
+  - instructor_id
+ep_oas:
+  columns:
+  - oa_user_id
+  - oa_bio
+  - oa_id
+  - oa_photo
+  - oa_visible
+ep_orgs:
+  columns:
+  - org_name
+  - org_last_active_date
+  - org_country
+  - org_active
+  - org_city
+  - org_student_count
+  - org_id
+  - org_instructor_count
+  - org_touched
+  - org_courses
+  - org_oa_count
+  - org_course_count
+  - org_ca_count
+ep_revisions:
+  columns:
+  - rev_minor_edit
+  - rev_object_identifier
+  - rev_time
+  - rev_deleted
+  - rev_comment
+  - rev_user_text
+  - rev_data
+  - rev_object_id
+  - rev_type
+  - rev_user_id
+  - rev_id
+ep_students:
+  columns:
+  - student_last_enroll
+  - student_last_course
+  - student_id
+  - student_active_enroll
+  - student_last_active
+  - student_user_id
+  - student_first_course
+  - student_first_enroll
+ep_users_per_course:
+  columns:
+  - upc_role
+  - upc_time
+  - upc_course_id
+  - upc_user_id
+externallinks:
+  columns:
+  - el_id
+  - el_to
+  - el_index
+  - el_from
+flaggedimages:
+  columns:
+  - fi_img_sha1
+  - fi_name
+  - fi_rev_id
+  - fi_img_timestamp
+flaggedpage_config:
+  columns:
+  - fpc_page_id
+  - fpc_select
+  - fpc_level
+  - fpc_override
+  - fpc_expiry
+flaggedpage_pending:
+  columns:
+  - fpp_pending_since
+  - fpp_rev_id
+  - fpp_page_id
+  - fpp_quality
+flaggedpages:
+  columns:
+  - fp_page_id
+  - fp_quality
+  - fp_stable
+  - fp_reviewed
+  - fp_pending_since
+flaggedrevs:
+  columns:
+  - fr_page_id
+  - fr_img_sha1
+  - fr_timestamp
+  - fr_img_name
+  - fr_comment
+  - fr_tags
+  - fr_quality
+  - fr_flags
+  - fr_text
+  - fr_user
+  - fr_rev_id
+  - fr_img_timestamp
+  - fr_rev_timestamp
+flaggedrevs_promote:
+  columns:
+  - frp_user_params
+  - frp_user_id
+flaggedrevs_statistics:
+  columns:
+  - frs_stat_key
+  - frs_stat_val
+  - frs_timestamp
+flaggedrevs_stats:
+  columns:
+  - synced
+  - total
+  - namespace
+  - reviewed
+flaggedrevs_stats2:
+  columns:
+  - ave_review_time
+  - med_review_time
+  - ave_pending_time
+  - stat_id
+flaggedrevs_tracking:
+  columns:
+  - ftr_title
+  - ftr_namespace
+  - ftr_from
+flaggedtemplates:
+  columns:
+  - ft_rev_id
+  - ft_namespace
+  - ft_title
+  - ft_tmp_rev_id
+geo_tags:
+  columns:
+  - gt_dim
+  - gt_region
+  - gt_name
+  - gt_page_id
+  - gt_lat
+  - gt_type
+  - gt_id
+  - gt_country
+  - gt_globe
+  - gt_primary
+  - gt_lon
+global_block_whitelist:
+  columns:
+  - gbw_id
+  - gbw_address
+  - gbw_by
+  - gbw_expiry
+  - gbw_reason
+  - gbw_by_text
+globalblocks:
+  columns:
+  - gb_range_end
+  - gb_reason
+  - gb_timestamp
+  - gb_address
+  - gb_id
+  - gb_anon_only
+  - gb_by_wiki
+  - gb_by
+  - gb_expiry
+  - gb_range_start
+globalimagelinks:
+  columns:
+  - gil_page_namespace
+  - gil_wiki
+  - gil_page_title
+  - gil_page
+  - gil_page_namespace_id
+  - gil_to
+hashs:
+  columns:
+  - hs_nstitle
+  - hs_timestamp
+  - hs_user_text
+  - hs_hash
+  - hs_old_id
+hitcounter:
+  columns:
+  - hc_id
+image:
+  columns:
+  - img_bits
+  - img_size
+  - img_user
+  - img_metadata
+  - img_major_mime
+  - img_media_type
+  - img_width
+  - img_minor_mime
+  - img_description
+  - img_height
+  - img_name
+  - img_user_text
+  - img_timestamp
+  - img_sha1
+imagelinks:
+  columns:
+  - il_from
+  - il_to
+  - il_from_namespace
+interwiki:
+  columns:
+  - iw_url
+  - iw_local
+  - iw_wikiid
+  - iw_trans
+  - iw_prefix
+  - iw_api
+iwlinks:
+  columns:
+  - iwl_prefix
+  - iwl_title
+  - iwl_from
+l10n_cache:
+  columns:
+  - lc_key
+  - lc_value
+  - lc_lang
+langlinks:
+  columns:
+  - ll_from
+  - ll_lang
+  - ll_title
+links:
+  columns:
+  - l_to
+  - l_from
+localisation:
+  columns:
+  - lo_value
+  - lo_language
+  - lo_key
+localisation_file_hash:
+  columns:
+  - lfh_timestamp
+  - lfh_file
+  - lfh_hash
+math:
+  columns:
+  - math_inputhash
+  - math_html
+  - math_html_conservativeness
+  - math_mathml
+  - math_outputhash
+module_deps:
+  columns:
+  - md_skin
+  - md_module
+  - md_deps
+msg_resource:
+  columns:
+  - mr_lang
+  - mr_timestamp
+  - mr_blob
+  - mr_resource
+msg_resource_links:
+  columns:
+  - mrl_message
+  - mrl_resource
+page:
+  columns:
+  - page_title
+  - page_touched
+  - page_len
+  - page_counter
+  - page_is_redirect
+  - page_is_new
+  - page_latest
+  - page_content_model
+  - page_restrictions
+  - page_links_updated
+  - page_random
+  - page_no_title_convert
+  - page_id
+  - page_namespace
+page_props:
+  columns:
+  - pp_sortkey
+  - pp_propname
+  - pp_value
+  - pp_page
+page_restrictions:
+  columns:
+  - pr_level
+  - pr_cascade
+  - pr_type
+  - pr_page
+  - pr_expiry
+  - pr_id
+  - pr_user
+pagelinks:
+  columns:
+  - pl_namespace
+  - pl_from_namespace
+  - pl_from
+  - pl_title
+pagetriage_log:
+  columns:
+  - ptrl_user_id
+  - ptrl_reviewed
+  - ptrl_page_id
+  - ptrl_timestamp
+  - ptrl_id
+  - ptrl_comment
+pagetriage_page:
+  columns:
+  - ptrp_reviewed_updated
+  - ptrp_reviewed
+  - ptrp_deleted
+  - ptrp_page_id
+  - ptrp_created
+  - ptrp_last_reviewed_by
+  - ptrp_tags_updated
+pagetriage_page_tags:
+  columns:
+  - ptrpt_tag_id
+  - ptrpt_value
+  - ptrpt_page_id
+pagetriage_tags:
+  columns:
+  - ptrt_tag_desc
+  - ptrt_tag_id
+  - ptrt_tag_name
+pif_edits:
+  columns:
+  - pif_user
+  - pif_edits
+povwatch_log:
+  columns:
+  - pwl_title
+  - pwl_comment
+  - pwl_timestamp
+  - pwl_namespace
+  - pwl_user
+  - pwl_id
+povwatch_subscribers:
+  columns:
+  - pws_user
+protected_titles:
+  columns:
+  - pt_timestamp
+  - pt_create_perm
+  - pt_user
+  - pt_expiry
+  - pt_namespace
+  - pt_reason
+  - pt_title
+redirect:
+  columns:
+  - rd_interwiki
+  - rd_fragment
+  - rd_from
+  - rd_namespace
+  - rd_title
+revision_userindex:
+  columns:
+  - rev_content_format
+  - rev_sha1
+  - rev_len
+  - rev_text_id
+  - rev_page
+  - rev_comment
+  - rev_deleted
+  - rev_id
+  - rev_minor_edit
+  - rev_user_text
+  - rev_content_model
+  - rev_timestamp
+  - rev_user
+  - rev_parent_id
+site_identifiers:
+  columns:
+  - si_type
+  - si_key
+  - si_site
+site_stats:
+  columns:
+  - ss_total_views
+  - ss_total_pages
+  - ss_users
+  - ss_row_id
+  - ss_images
+  - ss_good_articles
+  - ss_active_users
+  - ss_total_edits
+sites:
+  columns:
+  - site_domain
+  - site_type
+  - site_forward
+  - site_group
+  - site_id
+  - site_protocol
+  - site_source
+  - site_language
+  - site_data
+  - site_global_key
+  - site_config
+tag_summary:
+  columns:
+  - ts_rc_id
+  - ts_tags
+  - ts_log_id
+  - ts_rev_id
+templatelinks:
+  columns:
+  - tl_from
+  - tl_title
+  - tl_namespace
+  - tl_from_namespace
+transcode:
+  columns:
+  - transcode_key
+  - transcode_time_error
+  - transcode_time_startwork
+  - transcode_final_bitrate
+  - transcode_image_name
+  - transcode_error
+  - transcode_time_success
+  - transcode_id
+  - transcode_time_addjob
+updatelog:
+  columns:
+  - ul_value
+  - ul_key
+updates:
+  columns:
+  - up_page
+  - up_sequence
+  - up_action
+  - up_timestamp
+user_daily_contribs:
+  columns:
+  - user_id
+  - day
+  - contribs
+user_former_groups:
+  columns:
+  - ufg_group
+  - ufg_user
+user_groups:
+  columns:
+  - ug_user
+  - ug_group
+user_properties:
+  columns:
+  - __where__
+  - up_property
+  - up_user
+  - up_value
+valid_tag:
+  columns:
+  - vt_tag
+wb_changes:
+  columns:
+  - change_user_id
+  - change_revision_id
+  - change_type
+  - change_object_id
+  - change_time
+  - change_id
+  - change_info
+wb_changes_dispatch:
+  columns:
+  - chd_touched
+  - chd_site
+  - chd_db
+  - chd_lock
+  - chd_disabled
+  - chd_seen
+wb_entity_per_page:
+  columns:
+  - epp_page_id
+  - epp_entity_type
+  - epp_redirect_target
+  - epp_entity_id
+wb_id_counters:
+  columns:
+  - id_type
+  - id_value
+wb_items_per_site:
+  columns:
+  - ips_item_id
+  - ips_site_page
+  - ips_site_id
+  - ips_row_id
+wb_property_info:
+  columns:
+  - pi_info
+  - pi_type
+  - pi_property_id
+wb_terms:
+  columns:
+  - term_search_key
+  - term_row_id
+  - term_language
+  - term_entity_id
+  - term_entity_type
+  - term_text
+  - term_type
+  - term_weight
+wikilove_image_log:
+  columns:
+  - wlil_image
+  - wlil_user_id
+  - wlil_id
+  - wlil_success
+  - wlil_timestamp
+wikilove_log:
+  columns:
+  - wll_sender_registration
+  - wll_receiver_editcount
+  - wll_message
+  - wll_receiver_registration
+  - wll_id
+  - wll_subject
+  - wll_timestamp
+  - wll_sender_editcount
+  - wll_type
+  - wll_receiver
+  - wll_email
+  - wll_sender
