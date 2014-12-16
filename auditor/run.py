@@ -2,6 +2,7 @@ import argparse
 import MySQLdb
 import yaml
 import re
+from datetime import datetime
 
 from dbreflector import DBReflector
 from mwconfig import MWConfig
@@ -15,6 +16,7 @@ argparser.add_argument('--hosts', help='Hosts to connect to')
 argparser.add_argument('--config-file-path', help='Path to config file')
 argparser.add_argument('--public', help='Check only public databases, identified by suffix from config',
                        action='store_true')
+argparser.add_argument('--output-report-path', help='Path to report.yaml file that should be output')
 
 args = argparser.parse_args()
 
@@ -76,18 +78,13 @@ for configfile in config['tableschema-files']:
 
 extra_tables = set(tables.keys()) - set(expected_tables.keys())
 
-# Write out extra tables list
-yaml.dump({
-    tables[table].name: tables[table].dbs.keys() for table in extra_tables
-}, open('extratables.yaml', 'w'))
+# Write out report
+report = {
+    'generated_at': datetime.now().isoformat(),
+    'hosts': hostspec,
+    'extratables': {tables[table].name: tables[table].dbs.keys() for table in extra_tables},
+    'extradbs': list(all_dbs - primary_dblist - secondary_dblist),
+    'missingdbs': list(primary_dblist - set(dbs.keys())),
+}
 
-# Write out db lists
-yaml.dump({
-    'not-in-db': list(primary_dblist - set(dbs.keys())),
-    'not-in-dblist': list(all_dbs - primary_dblist - secondary_dblist)
-}, open('extradbs.yaml', 'w'))
-
-# Write out table schemas
-schemadata = {table.name: table.to_dict() for table in tables.values()}
-
-yaml.dump(schemadata, open('tableschema.yaml', 'w'), default_flow_style=False)
+yaml.dump(report, open(args.output_report_path, 'w'))
