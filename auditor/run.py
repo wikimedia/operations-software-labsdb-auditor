@@ -12,7 +12,7 @@ argparser = argparse.ArgumentParser()
 
 argparser.add_argument('--hosts', help='Hosts to connect to')
 argparser.add_argument('--mwconfig', help='Path to mediawiki-config repository')
-argparser.add_argument('--expectedconfig', help='Path to yaml file listing expected table config', nargs='+')
+argparser.add_argument('--expectedconfig', help='Path to yaml file listing expected table config')
 argparser.add_argument('--db_suffix', help='Suffix to use for each database name',
                        default='')
 
@@ -53,6 +53,19 @@ for host in hostspec:
                 table = Table(tablename, [Column(cn) for cn in columnnames])
                 tables[tablename] = table
                 db.add_table(table)
+
+expected_tables = {}
+for configfile in args.expectedconfig.split(','):
+    configdata = yaml.load(open(configfile))
+    for tablename, tabledict in configdata.items():
+        expected_tables[tablename] = Table.from_dict(tablename, tabledict)
+
+extra_tables = set(tables.keys()) - set(expected_tables.keys())
+
+# Write out extra tables list
+yaml.dump({
+    tables[table].name: tables[table].dbs.keys() for table in extra_tables
+}, open('extratables.yaml', 'w'))
 
 # Write out db lists
 yaml.dump({

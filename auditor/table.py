@@ -38,7 +38,7 @@ class Table(object):
 
     @classmethod
     def from_dict(cls, tablename, tabledata):
-        table = cls(tablename, tabledata.get('where', None))
+        table = cls(tablename, [], tabledata.get('where', None))
         if isinstance(tabledata['columns'], list):
             # Whitelisted table
             for colname in tabledata['columns']:
@@ -47,3 +47,4 @@ class Table(object):
             # Greylisted table!
             for colname, coldata in tabledata['columns'].items():
                 table.add_column(Column(colname, False, coldata.get('condition'), coldata.get('replacewith')))
+        return table
