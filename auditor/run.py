@@ -1,6 +1,7 @@
 import argparse
 import MySQLdb
 import yaml
+import re
 
 from dbreflector import DBReflector
 from mwconfig import MWConfig
@@ -15,6 +16,8 @@ argparser.add_argument('--mwconfig', help='Path to mediawiki-config repository')
 argparser.add_argument('--expectedconfig', help='Path to yaml file listing expected table config')
 argparser.add_argument('--db_suffix', help='Suffix to use for each database name',
                        default='')
+argparser.add_argument('--ignore-db-pattern', help='DBs with names matching this regex will be ignored',
+                       default=None)
 
 args = argparser.parse_args()
 
@@ -39,6 +42,8 @@ for host in hostspec:
     reflector = DBReflector(conn)
     dbnames = reflector.get_databases()
     for dbname in dbnames:
+        if args.ignore_db_pattern and re.match(args.ignore_db_pattern, dbname):
+            continue
         all_dbs.add(dbname)
         if dbname not in whitelist_dbs:
             continue
