@@ -12,20 +12,29 @@ from column import Column
 argparser = argparse.ArgumentParser()
 
 argparser.add_argument('--hosts', help='Hosts to connect to')
-argparser.add_argument('--mwconfig', help='Path to mediawiki-config repository')
-argparser.add_argument('--expectedconfig', help='Path to yaml file listing expected table config')
-argparser.add_argument('--db_suffix', help='Suffix to use for each database name',
-                       default='')
-argparser.add_argument('--ignore-db-pattern', help='DBs with names matching this regex will be ignored',
-                       default=None)
+argparser.add_argument('--config-file-path', help='Path to config file')
+argparser.add_argument('--public', help='Check only public databases, identified by suffix from config',
+                       action='store_true')
 
 args = argparser.parse_args()
 
-mwconfig = MWConfig(args.mwconfig)
+config = yaml.load(open(args.config_file_path))
+mwconfig = MWConfig(config['mediawiki-config-path'])
 
-raw_whitelist_dbs = set(mwconfig.get_dblist('all')) - set(mwconfig.get_dblist('private'))
-whitelist_dbs = set([r + args.db_suffix for r in raw_whitelist_dbs])
+private_dbs = set(mwconfig.get_dblist('all')) - set(mwconfig.get_dblist('private'))
+public_dbs = set([r + config['public-db-suffix'] for r in private_dbs])
 
+if args.public:
+    primary_dblist = public_dbs
+    secondary_dblist = private_dbs
+else:
+    primary_dblist = private_dbs
+    secondary_dblist = public_dbs
+
+if config['ignore-db-pattern']:
+    ignore_db_re = re.compile(config['ignore-db-pattern'])
+else:
+    ignore_db_re = None
 all_dbs = set()
 
 dbs = {}
@@ -42,10 +51,10 @@ for host in hostspec:
     reflector = DBReflector(conn)
     dbnames = reflector.get_databases()
     for dbname in dbnames:
-        if args.ignore_db_pattern and re.match(args.ignore_db_pattern, dbname):
+        if ignore_db_re and ignore_db_re.match(dbname):
             continue
         all_dbs.add(dbname)
-        if dbname not in whitelist_dbs:
+        if dbname not in primary_dblist:
             continue
         db = WikiDatabase(dbname)
         dbs[dbname] = db
@@ -60,7 +69,7 @@ for host in hostspec:
                 db.add_table(table)
 
 expected_tables = {}
-for configfile in args.expectedconfig.split(','):
+for configfile in config['tableschema-files']:
     configdata = yaml.load(open(configfile))
     for tablename, tabledict in configdata.items():
         expected_tables[tablename] = Table.from_dict(tablename, tabledict)
@@ -74,9 +83,9 @@ yaml.dump({
 
 # Write out db lists
 yaml.dump({
-    'not-in-db': list(whitelist_dbs - set(dbs.keys())),
-    'not-in-dblist': list(all_dbs - whitelist_dbs - raw_whitelist_dbs)
-}, open('dblists.yaml', 'w'))
+    'not-in-db': list(primary_dblist - set(dbs.keys())),
+    'not-in-dblist': list(all_dbs - primary_dblist - secondary_dblist)
+}, open('extradbs.yaml', 'w'))
 
 # Write out table schemas
 schemadata = {table.name: table.to_dict() for table in tables.values()}

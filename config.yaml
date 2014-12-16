@@ -1,0 +1,6 @@
+mediawiki-config-path: ../mediawiki-config
+tableschema-files:
+  - whitelisted.yaml
+  - greylisted.yaml
+public-db-suffix: '_p'
+ignore-db-pattern: '.*__.*'
