@@ -6,11 +6,13 @@ from dbreflector import DBReflector
 from mwconfig import MWConfig
 from wikidatabase import WikiDatabase
 from table import Table
+from column import Column
 
 argparser = argparse.ArgumentParser()
 
 argparser.add_argument('--hosts', help='Hosts to connect to')
 argparser.add_argument('--mwconfig', help='Path to mediawiki-config repository')
+argparser.add_argument('--expectedconfig', help='Path to yaml file listing expected table config', nargs='+')
 argparser.add_argument('--db_suffix', help='Suffix to use for each database name',
                        default='')
 
@@ -47,7 +49,8 @@ for host in hostspec:
             if tablename in tables:
                 tables[tablename].add_db(db)
             else:
-                table = Table(tablename, reflector.get_columns(dbname, tablename))
+                columnnames = reflector.get_columns(dbname, tablename)
+                table = Table(tablename, [Column(cn) for cn in columnnames])
                 tables[tablename] = table
                 db.add_table(table)
 
@@ -58,11 +61,6 @@ yaml.dump({
 }, open('dblists.yaml', 'w'))
 
 # Write out table schemas
-schemadata = {}
-for name, table in tables.items():
-    tabledata = {}
-    for columnname in table.columns:
-        tabledata[columnname] = {'whitelisted': True}
-    schemadata[name] = tabledata
+schemadata = {table.name: table.to_dict() for table in tables.values()}
 
 yaml.dump(schemadata, open('tableschema.yaml', 'w'), default_flow_style=False)
