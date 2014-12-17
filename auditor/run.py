@@ -78,6 +78,14 @@ for configfile in config['tableschema-files']:
 
 extra_tables = set(tables.keys()) - set(expected_tables.keys())
 
+extra_columns = {}
+for table in tables.values():
+    if table.name in expected_tables:
+        # Only report if the table is an expected table but has extra columns
+        col_diff = set([c.name for c in table.columns]) - set([c.name for c in expected_tables[table.name].columns])
+        if col_diff:
+            extra_columns[table.name] = list(col_diff)
+
 # Write out report
 report = {
     'generated_at': datetime.now().isoformat(),
@@ -85,6 +93,7 @@ report = {
     'extratables': {tables[table].name: tables[table].dbs.keys() for table in extra_tables},
     'extradbs': list(all_dbs - primary_dblist - secondary_dblist),
     'missingdbs': list(primary_dblist - set(dbs.keys())),
+    'extra-columns': extra_columns
 }
 
 yaml.dump(report, open(args.output_report_path, 'w'))
