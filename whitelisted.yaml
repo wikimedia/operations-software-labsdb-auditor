@@ -582,22 +582,6 @@ redirect:
   - rd_from
   - rd_namespace
   - rd_title
-revision_userindex:
-  columns:
-  - rev_content_format
-  - rev_sha1
-  - rev_len
-  - rev_text_id
-  - rev_page
-  - rev_comment
-  - rev_deleted
-  - rev_id
-  - rev_minor_edit
-  - rev_user_text
-  - rev_content_model
-  - rev_timestamp
-  - rev_user
-  - rev_parent_id
 site_identifiers:
   columns:
   - si_type
@@ -672,12 +656,6 @@ user_groups:
   columns:
   - ug_user
   - ug_group
-user_properties:
-  columns:
-  - __where__
-  - up_property
-  - up_user
-  - up_value
 valid_tag:
   columns:
   - vt_tag

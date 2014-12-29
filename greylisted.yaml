@@ -219,11 +219,9 @@ archive_userindex:
     ar_title:
       whitelisted: true
     ar_user:
-      condition: ar_deleted & 4
-      whitelisted: false
+      whitelisted: true
     ar_user_text:
-      condition: ar_deleted & 4
-      whitelisted: false
+      whitelisted: true
   where: ar_deleted & 4 = 0
 filearchive:
   columns:
@@ -333,11 +331,9 @@ filearchive_userindex:
     fa_timestamp:
       whitelisted: true
     fa_user:
-      condition: fa_deleted & 4
-      whitelisted: false
+      whitelisted: true
     fa_user_text:
-      condition: fa_deleted & 4
-      whitelisted: false
+      whitelisted: true
     fa_width:
       condition: fa_deleted & 1
       whitelisted: false
@@ -388,8 +384,7 @@ ipblocks:
 ipblocks_ipindex:
   columns:
     ipb_address:
-      condition: ipb_auto != 0
-      whitelisted: false
+      whitelisted: true
     ipb_allow_usertalk:
       whitelisted: true
     ipb_anon_only:
@@ -416,11 +411,9 @@ ipblocks_ipindex:
     ipb_parent_block_id:
       whitelisted: true
     ipb_range_end:
-      condition: ipb_auto != 0
-      whitelisted: false
+      whitelisted: true
     ipb_range_start:
-      condition: ipb_auto != 0
-      whitelisted: false
+      whitelisted: true
     ipb_reason:
       whitelisted: true
     ipb_timestamp:
@@ -447,7 +440,7 @@ logging:
       condition: log_deleted & 1
       whitelisted: false
     log_params:
-      condition: log_deleted & 1
+      condition: log_deleted
       whitelisted: false
     log_timestamp:
       whitelisted: true
@@ -466,8 +459,7 @@ logging:
 logging_logindex:
   columns:
     log_action:
-      condition: log_deleted & 1
-      whitelisted: false
+      whitelisted: true
     log_comment:
       condition: log_deleted & 2
       whitelisted: false
@@ -476,19 +468,16 @@ logging_logindex:
     log_id:
       whitelisted: true
     log_namespace:
-      condition: log_deleted & 1
-      whitelisted: false
+      whitelisted: true
     log_page:
-      condition: log_deleted & 1
-      whitelisted: false
+      whitelisted: true
     log_params:
-      condition: log_deleted & 1
       whitelisted: false
+      condition: log_deleted
     log_timestamp:
       whitelisted: true
     log_title:
-      condition: log_deleted & 1
-      whitelisted: false
+      whitelisted: true
     log_type:
       whitelisted: true
     log_user:
@@ -497,7 +486,7 @@ logging_logindex:
     log_user_text:
       condition: log_deleted & 4
       whitelisted: false
-  where: log_deleted & 0 = 0 AND logtype != 'suppress'
+  where: (log_deleted & 1) = 0 AND logtype != 'suppress'
 logging_userindex:
   columns:
     log_action:
@@ -517,7 +506,7 @@ logging_userindex:
       condition: log_deleted & 1
       whitelisted: false
     log_params:
-      condition: log_deleted & 1
+      condition: log_deleted
       whitelisted: false
     log_timestamp:
       whitelisted: true
@@ -527,11 +516,9 @@ logging_userindex:
     log_type:
       whitelisted: true
     log_user:
-      condition: log_deleted & 4
-      whitelisted: false
+      whitelisted: true
     log_user_text:
-      condition: log_deleted & 4
-      whitelisted: false
+      whitelisted: true
   where: log_deleted & 4 = 0 AND log_type != 'suppress'
 mark_as_helpful:
   columns:
@@ -624,11 +611,9 @@ oldimage_userindex:
     oi_timestamp:
       whitelisted: true
     oi_user:
-      condition: oi_deleted & 4
-      whitelisted: false
+      whitelisted: true
     oi_user_text:
-      condition: oi_deleted & 4
-      whitelisted: false
+      whitelisted: true
     oi_width:
       whitelisted: true
   where: oi_deleted & 4 = 0
@@ -737,11 +722,9 @@ recentchanges_userindex:
     rc_type:
       whitelisted: true
     rc_user:
-      condition: rc_deleted & 4
-      whitelisted: false
+      whitelisted: true
     rc_user_text:
-      condition: rc_deleted & 4
-      whitelisted: false
+      whitelisted: true
   where: rc_deleted & 4 = 0
 revision:
   columns:
@@ -779,6 +762,41 @@ revision:
     rev_user_text:
       condition: rev_deleted & 4
       whitelisted: false
+revision_userindex:
+  columns:
+    rev_comment:
+      condition: rev_deleted & 2
+      whitelisted: false
+    rev_content_format:
+      whitelisted: true
+    rev_content_model:
+      whitelisted: true
+    rev_deleted:
+      whitelisted: true
+    rev_id:
+      whitelisted: true
+    rev_len:
+      condition: rev_deleted & 1
+      whitelisted: false
+    rev_minor_edit:
+      whitelisted: true
+    rev_page:
+      whitelisted: true
+    rev_parent_id:
+      whitelisted: true
+    rev_sha1:
+      condition: rev_deleted & 1
+      whitelisted: false
+    rev_text_id:
+      condition: rev_deleted & 1
+      whitelisted: false
+    rev_timestamp:
+      whitelisted: true
+    rev_user:
+      whitelisted: true
+    rev_user_text:
+      whitelisted: true
+  where: rev_deleted & 4 = 0
 user:
   columns:
     user_editcount:
