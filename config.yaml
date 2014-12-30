@@ -2,5 +2,8 @@ mediawiki-config-path: ../mediawiki-config
 tableschema-files:
   - whitelisted.yaml
   - greylisted.yaml
-public-db-suffix: '_p'
-ignore-db-pattern: '(p|u|s)\d{4,5}.*'
+user-dbname-regex: '(p|u|s)\d{4,5}.*'
+hosts:
+  - labsdb1001.eqiad.wmnet
+  - labsdb1002.eqiad.wmnet
+  - labsdb1003.eqiad.wmnet
