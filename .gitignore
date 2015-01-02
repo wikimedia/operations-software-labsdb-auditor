@@ -3,3 +3,4 @@ lib/
 include/
 .idea/
 .Python
+*.pyc
