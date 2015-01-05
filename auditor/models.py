@@ -87,7 +87,7 @@ class Table(object):
         else:
             # Greylisted table!
             for colname, coldata in tabledata['columns'].items():
-                table.add_column(Column(colname, False, coldata.get('condition'), coldata.get('replacewith')))
+                table.add_column(Column(colname, coldata.get('whitelisted'), coldata.get('condition'), coldata.get('replacewith')))
         return table
 
 
