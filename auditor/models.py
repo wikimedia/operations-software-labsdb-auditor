@@ -43,14 +43,14 @@ class Column(object):
 
 
 class Table(object):
-    def __init__(self, name, columns=[], where=None, table_name=None):
+    def __init__(self, name, columns={}, where=None, table_name=None):
         self.name = name
         self.columns = columns
         self.where = where
         self.table_name = table_name if table_name else name
 
     def add_column(self, column):
-        self.columns.append(column)
+        self.columns[column.name] = column
         column.table = self
 
     def to_dict(self):
@@ -60,12 +60,12 @@ class Table(object):
         tabledict = {}
         if self.where:
             tabledict['where'] = self.where
-        if all([c.whitelisted for c in self.columns]):
+        if all([c.whitelisted for c in self.columns.values()]):
             # Everything is whitelisted!
             tabledict['columns'] = [c.name for c in self.columns]
         else:
             tabledict['columns'] = {}
-            for c in self.columns:
+            for c in self.columns.values():
                 columndict = {}
                 columndict['whitelisted'] = c.whitelisted
                 if c.condition:
@@ -79,7 +79,7 @@ class Table(object):
 
     @classmethod
     def from_dict(cls, tablename, tabledata):
-        table = cls(tablename, [], tabledata.get('where', None), tabledata.get('table_name', None))
+        table = cls(tablename, {}, tabledata.get('where', None), tabledata.get('table_name', None))
         if isinstance(tabledata['columns'], list):
             # Whitelisted table
             for colname in tabledata['columns']:
