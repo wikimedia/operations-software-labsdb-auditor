@@ -33,6 +33,7 @@ from runner import ReportRunner
 
 from reports.databases import databases_report
 from reports.tables import extra_tables_report
+from reports.viewdiffs import views_schema_diff_report
 
 
 argparser = argparse.ArgumentParser()
@@ -57,6 +58,7 @@ rr = ReportRunner(config)
 
 rr.register_report(databases_report)
 rr.register_report(extra_tables_report)
+rr.register_report(views_schema_diff_report)
 
 logging.info('Starting report generation')
 reports = rr.run()

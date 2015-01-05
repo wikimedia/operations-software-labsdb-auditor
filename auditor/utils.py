@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 """
-Collection of utilities for dealing with databases
+Collection of utilities
 """
 
 
@@ -40,3 +40,19 @@ def get_tables(conn, dbname):
     tables = [r[0] for r in cur.fetchall()]
     cur.close()
     return tables
+
+
+def diff_iters(iter1, iter2):
+    """
+    Returns (iter1 - iter2, iter2 - iter1), but as lists
+    """
+    return list(set(iter1) - set(iter2)), list(set(iter2) - set(iter1))
+
+
+def common_iters(iter1, iter2):
+    """
+    Returns set(iter1) intersection set(iter2)
+
+    :return: Items in iter1 *and* iter2
+    """
+    return set(iter1).intersection(iter2)

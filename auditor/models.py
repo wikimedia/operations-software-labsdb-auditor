@@ -17,6 +17,8 @@ Contains classes that Model how LabsDB should be
 import yaml
 import os
 
+from utils import diff_iters
+
 
 class Column(object):
     """
@@ -87,7 +89,11 @@ class Table(object):
         else:
             # Greylisted table!
             for colname, coldata in tabledata['columns'].items():
-                table.add_column(Column(colname, coldata.get('whitelisted'), coldata.get('condition'), coldata.get('replacewith')))
+                col = Column(colname,
+                             whitelisted=coldata.get('whitelisted'),
+                             condition=coldata.get('condition'),
+                             replacewith=coldata.get('replacewith'))
+                table.add_column(col)
         return table
 
 
@@ -127,6 +133,6 @@ class Model(object):
         with open(all_dblist_path) as all_file, open(private_dblist_path) as priv_file:
             all_dbs = [l.strip() for l in all_file.readlines()]
             priv_dbs = [l.strip() for l in priv_file.readlines()]
-            dbs = list(set(all_dbs) - (set(priv_dbs)))
+            dbs, _ = diff_iters(all_dbs, priv_dbs)
 
         return cls(dbs, tables)

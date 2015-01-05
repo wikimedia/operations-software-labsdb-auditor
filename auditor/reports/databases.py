@@ -13,7 +13,7 @@
 # limitations under the License.
 import re
 
-from ..dbutils import get_databases
+from ..utils import get_databases
 
 
 def databases_report(config, model, conn):

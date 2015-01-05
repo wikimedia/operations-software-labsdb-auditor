@@ -14,7 +14,7 @@
 import logging
 import MySQLdb
 
-from ..dbutils import get_tables
+from ..utils import get_tables, diff_iters
 
 
 def _get_extra_tables(model, conn, dbs):
@@ -22,7 +22,7 @@ def _get_extra_tables(model, conn, dbs):
     for db in dbs:
         logging.debug('Finding extra tables on %s', db)
         try:
-            diff = set(get_tables(conn, db)) - set(model.tables.keys())
+            extra_tables, _ = diff_iters(get_tables(conn, db), model.tables)
         except MySQLdb.OperationalError as e:
             # Ignore missing database errors (cod 1049).
             # Not using MySQLdb.constants.ER because it is stupid and needs to be explicitly imported to use.
@@ -31,8 +31,8 @@ def _get_extra_tables(model, conn, dbs):
                 continue  # We have other reports taking care of unknown dbs
             else:
                 raise
-        if diff:
-            for tablename in diff:
+        if extra_tables:
+            for tablename in extra_tables:
                 if tablename in extra_tables:
                     extra_tables[tablename].append(db)
                 else:
