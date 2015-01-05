@@ -184,6 +184,7 @@ archive:
       condition: ar_deleted & 4
       whitelisted: false
 archive_userindex:
+  table_name: archive
   columns:
     ar_comment:
       whitelisted: false
@@ -282,6 +283,7 @@ filearchive:
       condition: fa_deleted & 1
       whitelisted: false
 filearchive_userindex:
+  table_name: filearchive
   columns:
     fa_archive_name:
       whitelisted: true
@@ -382,6 +384,7 @@ ipblocks:
       whitelisted: true
   where: ipb_deleted = 0
 ipblocks_ipindex:
+  table_name: ipblocks
   columns:
     ipb_address:
       whitelisted: true
@@ -457,6 +460,7 @@ logging:
       whitelisted: false
   where: logtype != 'suppress'
 logging_logindex:
+  table_name: logging
   columns:
     log_action:
       whitelisted: true
@@ -488,6 +492,7 @@ logging_logindex:
       whitelisted: false
   where: (log_deleted & 1) = 0 AND logtype != 'suppress'
 logging_userindex:
+  table_name: logging
   columns:
     log_action:
       condition: log_deleted & 1
@@ -582,6 +587,7 @@ oldimage:
     oi_width:
       whitelisted: true
 oldimage_userindex:
+  table_name: oldimage
   columns:
     oi_archive_name:
       whitelisted: true
@@ -673,6 +679,7 @@ recentchanges:
       condition: rc_deleted & 4
       whitelisted: false
 recentchanges_userindex:
+  table_name: recentchanges
   columns:
     rc_bot:
       whitelisted: true
@@ -763,6 +770,7 @@ revision:
       condition: rev_deleted & 4
       whitelisted: false
 revision_userindex:
+  table_name: revision
   columns:
     rev_comment:
       condition: rev_deleted & 2

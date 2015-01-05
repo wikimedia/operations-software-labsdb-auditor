@@ -43,10 +43,11 @@ class Column(object):
 
 
 class Table(object):
-    def __init__(self, name, columns=[], where=None):
+    def __init__(self, name, columns=[], where=None, table_name=None):
         self.name = name
         self.columns = columns
         self.where = where
+        self.table_name = table_name if table_name else name
 
     def add_column(self, column):
         self.columns.append(column)
@@ -72,11 +73,13 @@ class Table(object):
                 if c.replacewith:
                     columndict['replacewith'] = c.replacewith
                 tabledict['columns'][c.name] = columndict
+        if self.table_name != self.name:
+            tabledict['table_name'] = self.table_name
         return tabledict
 
     @classmethod
     def from_dict(cls, tablename, tabledata):
-        table = cls(tablename, [], tabledata.get('where', None))
+        table = cls(tablename, [], tabledata.get('where', None), tabledata.get('table_name', None))
         if isinstance(tabledata['columns'], list):
             # Whitelisted table
             for colname in tabledata['columns']:
