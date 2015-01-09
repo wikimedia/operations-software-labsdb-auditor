@@ -397,13 +397,6 @@ globalimagelinks:
   - gil_page
   - gil_page_namespace_id
   - gil_to
-hashs:
-  columns:
-  - hs_nstitle
-  - hs_timestamp
-  - hs_user_text
-  - hs_hash
-  - hs_old_id
 hitcounter:
   columns:
   - hc_id
@@ -551,21 +544,6 @@ pagetriage_tags:
   - ptrt_tag_desc
   - ptrt_tag_id
   - ptrt_tag_name
-pif_edits:
-  columns:
-  - pif_user
-  - pif_edits
-povwatch_log:
-  columns:
-  - pwl_title
-  - pwl_comment
-  - pwl_timestamp
-  - pwl_namespace
-  - pwl_user
-  - pwl_id
-povwatch_subscribers:
-  columns:
-  - pws_user
 protected_titles:
   columns:
   - pt_timestamp
