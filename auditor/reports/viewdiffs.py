@@ -12,6 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 import re
+import copy
 import logging
 from pyparsing import OneOrMore, Optional, Word, SkipTo, StringEnd, alphanums
 
@@ -72,7 +73,8 @@ def _cleanup_viewdefiner(full_sql, db, table):
     definer_sql = EXTRACT_VIEWDEF_RE.search(full_sql).groups()[1]
     private_db_name = db.replace('_p', '')
     sql = definer_sql.replace('`', '') \
-        .replace('%s.%s.' % (private_db_name, table), '')
+        .replace(private_db_name + '.', '') \
+        .replace(table + '.', '')
 
     return sql
 
@@ -90,14 +92,20 @@ identifier = alphanums + "_"
 if_definition = "if(" + SkipTo(",")("null_if") + "," + Word(identifier) + "," + Word(identifier) + ")"
 column_definition = (if_definition ^ Word(identifier)('expression')) + "AS" + Word(identifier)("name") + Optional(",")
 sql_definition = "select" + OneOrMore(column_definition)("columns") + \
-                 "from" + Word(identifier) + "." + Word(identifier)("tablename") + \
+                 "from" + Word(identifier)("tablename") + \
                  Optional("where" + SkipTo(StringEnd())("include_row_if")) + StringEnd()
 
+
+# Caches cleaned definer sql -> table instances
+# Since a lot of definers are the same, this memoization should speed things up
+cache = {}
 
 def _table_from_definer(sql, viewname):
     """
     Build a Table object given a cleaned up SQL statement that defines the view
     """
+    if sql in cache:
+        return copy.deepcopy(cache[sql])
     res = sql_definition.parseString(sql)
     table = Table(viewname, {}, res.include_row_if if res.include_row_if else None, res.tablename)
     for tokens, start, end in column_definition.scanString(sql):
@@ -105,6 +113,7 @@ def _table_from_definer(sql, viewname):
                                 whitelisted=tokens.null_if == '' and tokens.expression != 'NULL',
                                 null_if=tokens.null_if if tokens.null_if else None))
 
+    cache[sql] = table
     return table
 
 

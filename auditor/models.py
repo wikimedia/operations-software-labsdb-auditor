@@ -52,7 +52,6 @@ class Table(object):
 
     def add_column(self, column):
         self.columns[column.name] = column
-        column.table = self
 
     def to_dict(self):
         """
