@@ -18,7 +18,7 @@ from auditor.utils import get_tables, diff_iters
 
 
 def _get_extra_tables(model, conn, dbs):
-    extra_tables = {}  # K:V :: tablename::list<dbname>
+    extra_tables_dbs = {}  # K:V :: tablename::list<dbname>
     for db in dbs:
         logging.debug('Finding extra tables on %s', db)
         try:
@@ -33,11 +33,11 @@ def _get_extra_tables(model, conn, dbs):
                 raise
         if extra_tables:
             for tablename in extra_tables:
-                if tablename in extra_tables:
-                    extra_tables[tablename].append(db)
+                if tablename in extra_tables_dbs:
+                    extra_tables_dbs[tablename].append(db)
                 else:
-                    extra_tables[tablename] = [db]
-    return extra_tables
+                    extra_tables_dbs[tablename] = [db]
+    return extra_tables_dbs
 
 
 def extra_tables_report(config, model, conn):
