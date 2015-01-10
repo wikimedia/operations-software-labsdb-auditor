@@ -15,8 +15,8 @@ import re
 import logging
 from pyparsing import OneOrMore, Optional, Word, SkipTo, StringEnd, alphanums
 
-from ..models import Column, Table
-from ..utils import get_tables, diff_iters, common_iters
+from auditor.models import Column, Table
+from auditor.utils import get_tables, diff_iters, common_iters
 
 
 def _diff(expected, actual, fields):

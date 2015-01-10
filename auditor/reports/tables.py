@@ -14,7 +14,7 @@
 import logging
 import MySQLdb
 
-from ..utils import get_tables, diff_iters
+from auditor.utils import get_tables, diff_iters
 
 
 def _get_extra_tables(model, conn, dbs):
