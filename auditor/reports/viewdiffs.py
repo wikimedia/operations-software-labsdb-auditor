@@ -33,11 +33,11 @@ def _diff(expected, actual, fields):
 
 
 def diff_columns(expected, actual):
-    return _diff(expected, actual, ('name', 'whitelisted', 'condition', 'replacewith'))
+    return _diff(expected, actual, ('name', 'whitelisted', 'null_if'))
 
 
 def diff_tables(expected, actual):
-    table_diff = _diff(expected, actual, ('name', 'where', 'table_name'))
+    table_diff = _diff(expected, actual, ('name', 'include_row_if', 'table_name'))
     missing_cols, extra_cols = diff_iters(expected.columns, actual.columns)
     common_columns = common_iters(actual.columns, expected.columns)
     column_diffs = {}
@@ -87,11 +87,11 @@ def _cleanup_viewdefiner(full_sql, db, table):
 # Where cond is a valid SQL relational expression, column-name, wikiname, tablename are strings
 
 identifier = alphanums + "_"
-if_definition = "if(" + SkipTo(",")("condition") + "," + Word(identifier) + "," + Word(identifier) + ")"
+if_definition = "if(" + SkipTo(",")("null_if") + "," + Word(identifier) + "," + Word(identifier) + ")"
 column_definition = (if_definition ^ Word(identifier)('expression')) + "AS" + Word(identifier)("name") + Optional(",")
 sql_definition = "select" + OneOrMore(column_definition)("columns") + \
                  "from" + Word(identifier) + "." + Word(identifier)("tablename") + \
-                 Optional("where" + SkipTo(StringEnd())("where")) + StringEnd()
+                 Optional("where" + SkipTo(StringEnd())("include_row_if")) + StringEnd()
 
 
 def _table_from_definer(sql, viewname):
@@ -99,11 +99,11 @@ def _table_from_definer(sql, viewname):
     Build a Table object given a cleaned up SQL statement that defines the view
     """
     res = sql_definition.parseString(sql)
-    table = Table(viewname, {}, res.where if res.where else None, res.tablename)
+    table = Table(viewname, {}, res.include_row_if if res.include_row_if else None, res.tablename)
     for tokens, start, end in column_definition.scanString(sql):
         table.add_column(Column(tokens.name,
-                                whitelisted=tokens.condition == '' and tokens.expression != 'NULL',
-                                condition=tokens.condition if tokens.condition else None))
+                                whitelisted=tokens.null_if == '' and tokens.expression != 'NULL',
+                                null_if=tokens.null_if if tokens.null_if else None))
 
     return table
 

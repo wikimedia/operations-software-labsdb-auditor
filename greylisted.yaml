@@ -3,7 +3,7 @@ abuse_filter:
     af_actions:
       whitelisted: true
     af_comments:
-      condition: af_hidden
+      null_if: af_hidden
       whitelisted: false
     af_deleted:
       whitelisted: true
@@ -20,7 +20,7 @@ abuse_filter:
     af_id:
       whitelisted: true
     af_pattern:
-      condition: af_hidden
+      null_if: af_hidden
       whitelisted: false
     af_public_comments:
       whitelisted: true
@@ -153,7 +153,7 @@ archive:
     ar_id:
       whitelisted: true
     ar_len:
-      condition: (ar_deleted & 1)
+      null_if: (ar_deleted & 1)
       whitelisted: false
     ar_minor_edit:
       whitelisted: true
@@ -166,22 +166,22 @@ archive:
     ar_rev_id:
       whitelisted: true
     ar_sha1:
-      condition: (ar_deleted & 1)
+      null_if: (ar_deleted & 1)
       whitelisted: false
     ar_text:
       whitelisted: false
     ar_text_id:
-      condition: (ar_deleted & 1)
+      null_if: (ar_deleted & 1)
       whitelisted: false
     ar_timestamp:
       whitelisted: true
     ar_title:
       whitelisted: true
     ar_user:
-      condition: (ar_deleted & 4)
+      null_if: (ar_deleted & 4)
       whitelisted: false
     ar_user_text:
-      condition: (ar_deleted & 4)
+      null_if: (ar_deleted & 4)
       whitelisted: false
 archive_userindex:
   table_name: archive
@@ -195,7 +195,7 @@ archive_userindex:
     ar_id:
       whitelisted: true
     ar_len:
-      condition: (ar_deleted & 1)
+      null_if: (ar_deleted & 1)
       whitelisted: false
     ar_minor_edit:
       whitelisted: true
@@ -208,12 +208,12 @@ archive_userindex:
     ar_rev_id:
       whitelisted: true
     ar_sha1:
-      condition: (ar_deleted & 1)
+      null_if: (ar_deleted & 1)
       whitelisted: false
     ar_text:
       whitelisted: false
     ar_text_id:
-      condition: (ar_deleted & 1)
+      null_if: (ar_deleted & 1)
       whitelisted: false
     ar_timestamp:
       whitelisted: true
@@ -223,13 +223,13 @@ archive_userindex:
       whitelisted: true
     ar_user_text:
       whitelisted: true
-  where: ((ar_deleted & 4) = 0)
+  include_row_if: ((ar_deleted & 4) = 0)
 filearchive:
   columns:
     fa_archive_name:
       whitelisted: true
     fa_bits:
-      condition: (fa_deleted & 1)
+      null_if: (fa_deleted & 1)
       whitelisted: false
     fa_deleted:
       whitelisted: true
@@ -240,32 +240,32 @@ filearchive:
     fa_deleted_user:
       whitelisted: true
     fa_description:
-      condition: (fa_deleted & 2)
+      null_if: (fa_deleted & 2)
       whitelisted: false
     fa_height:
-      condition: (fa_deleted & 1)
+      null_if: (fa_deleted & 1)
       whitelisted: false
     fa_id:
       whitelisted: true
     fa_major_mime:
-      condition: (fa_deleted & 1)
+      null_if: (fa_deleted & 1)
       whitelisted: false
     fa_media_type:
-      condition: (fa_deleted & 1)
+      null_if: (fa_deleted & 1)
       whitelisted: false
     fa_metadata:
-      condition: (fa_deleted & 1)
+      null_if: (fa_deleted & 1)
       whitelisted: false
     fa_minor_mime:
-      condition: (fa_deleted & 1)
+      null_if: (fa_deleted & 1)
       whitelisted: false
     fa_name:
       whitelisted: true
     fa_sha1:
-      condition: (fa_deleted & 1)
+      null_if: (fa_deleted & 1)
       whitelisted: false
     fa_size:
-      condition: (fa_deleted & 1)
+      null_if: (fa_deleted & 1)
       whitelisted: false
     fa_storage_group:
       whitelisted: true
@@ -274,13 +274,13 @@ filearchive:
     fa_timestamp:
       whitelisted: true
     fa_user:
-      condition: (fa_deleted & 4)
+      null_if: (fa_deleted & 4)
       whitelisted: false
     fa_user_text:
-      condition: (fa_deleted & 4)
+      null_if: (fa_deleted & 4)
       whitelisted: false
     fa_width:
-      condition: (fa_deleted & 1)
+      null_if: (fa_deleted & 1)
       whitelisted: false
 filearchive_userindex:
   table_name: filearchive
@@ -288,7 +288,7 @@ filearchive_userindex:
     fa_archive_name:
       whitelisted: true
     fa_bits:
-      condition: (fa_deleted & 1)
+      null_if: (fa_deleted & 1)
       whitelisted: false
     fa_deleted:
       whitelisted: true
@@ -299,32 +299,32 @@ filearchive_userindex:
     fa_deleted_user:
       whitelisted: true
     fa_description:
-      condition: (fa_deleted & 2)
+      null_if: (fa_deleted & 2)
       whitelisted: false
     fa_height:
-      condition: (fa_deleted & 1)
+      null_if: (fa_deleted & 1)
       whitelisted: false
     fa_id:
       whitelisted: true
     fa_major_mime:
-      condition: (fa_deleted & 1)
+      null_if: (fa_deleted & 1)
       whitelisted: false
     fa_media_type:
-      condition: (fa_deleted & 1)
+      null_if: (fa_deleted & 1)
       whitelisted: false
     fa_metadata:
-      condition: (fa_deleted & 1)
+      null_if: (fa_deleted & 1)
       whitelisted: false
     fa_minor_mime:
-      condition: (fa_deleted & 1)
+      null_if: (fa_deleted & 1)
       whitelisted: false
     fa_name:
       whitelisted: true
     fa_sha1:
-      condition: (fa_deleted & 1)
+      null_if: (fa_deleted & 1)
       whitelisted: false
     fa_size:
-      condition: (fa_deleted & 1)
+      null_if: (fa_deleted & 1)
       whitelisted: false
     fa_storage_group:
       whitelisted: true
@@ -337,13 +337,13 @@ filearchive_userindex:
     fa_user_text:
       whitelisted: true
     fa_width:
-      condition: (fa_deleted & 1)
+      null_if: (fa_deleted & 1)
       whitelisted: false
-  where: ((fa_deleted & 4) = 0)
+  include_row_if: ((fa_deleted & 4) = 0)
 ipblocks:
   columns:
     ipb_address:
-      condition: (ipb_auto <> 0)
+      null_if: (ipb_auto <> 0)
       whitelisted: false
     ipb_allow_usertalk:
       whitelisted: true
@@ -370,10 +370,10 @@ ipblocks:
     ipb_parent_block_id:
       whitelisted: true
     ipb_range_end:
-      condition: (ipb_auto <> 0)
+      null_if: (ipb_auto <> 0)
       whitelisted: false
     ipb_range_start:
-      condition: (ipb_auto <> 0)
+      null_if: (ipb_auto <> 0)
       whitelisted: false
     ipb_reason:
       whitelisted: true
@@ -381,7 +381,7 @@ ipblocks:
       whitelisted: true
     ipb_user:
       whitelisted: true
-  where: (ipb_deleted = 0)
+  include_row_if: (ipb_deleted = 0)
 ipblocks_ipindex:
   table_name: ipblocks
   columns:
@@ -421,49 +421,49 @@ ipblocks_ipindex:
       whitelisted: true
     ipb_user:
       whitelisted: true
-  where: ((ipb_deleted = 0) and (ipb_auto = 0))
+  include_row_if: ((ipb_deleted = 0) and (ipb_auto = 0))
 logging:
   columns:
     log_action:
-      condition: (log_deleted & 1)
+      null_if: (log_deleted & 1)
       whitelisted: false
     log_comment:
-      condition: (log_deleted & 2)
+      null_if: (log_deleted & 2)
       whitelisted: false
     log_deleted:
       whitelisted: true
     log_id:
       whitelisted: true
     log_namespace:
-      condition: (log_deleted & 1)
+      null_if: (log_deleted & 1)
       whitelisted: false
     log_page:
-      condition: (log_deleted & 1)
+      null_if: (log_deleted & 1)
       whitelisted: false
     log_params:
-      condition: log_deleted
+      null_if: log_deleted
       whitelisted: false
     log_timestamp:
       whitelisted: true
     log_title:
-      condition: (log_deleted & 1)
+      null_if: (log_deleted & 1)
       whitelisted: false
     log_type:
       whitelisted: true
     log_user:
-      condition: (log_deleted & 4)
+      null_if: (log_deleted & 4)
       whitelisted: false
     log_user_text:
-      condition: (log_deleted & 4)
+      null_if: (log_deleted & 4)
       whitelisted: false
-  where: (log_type <> 'suppress')
+  include_row_if: (log_type <> 'suppress')
 logging_logindex:
   table_name: logging
   columns:
     log_action:
       whitelisted: true
     log_comment:
-      condition: (log_deleted & 2)
+      null_if: (log_deleted & 2)
       whitelisted: false
     log_deleted:
       whitelisted: true
@@ -475,7 +475,7 @@ logging_logindex:
       whitelisted: true
     log_params:
       whitelisted: false
-      condition: log_deleted
+      null_if: log_deleted
     log_timestamp:
       whitelisted: true
     log_title:
@@ -483,38 +483,38 @@ logging_logindex:
     log_type:
       whitelisted: true
     log_user:
-      condition: (log_deleted & 4)
+      null_if: (log_deleted & 4)
       whitelisted: false
     log_user_text:
-      condition: (log_deleted & 4)
+      null_if: (log_deleted & 4)
       whitelisted: false
-  where: (((log_deleted & 1) = 0) and (log_type <> 'suppress'))
+  include_row_if: (((log_deleted & 1) = 0) and (log_type <> 'suppress'))
 logging_userindex:
   table_name: logging
   columns:
     log_action:
-      condition: (log_deleted & 1)
+      null_if: (log_deleted & 1)
       whitelisted: false
     log_comment:
-      condition: (log_deleted & 2)
+      null_if: (log_deleted & 2)
       whitelisted: false
     log_deleted:
       whitelisted: true
     log_id:
       whitelisted: true
     log_namespace:
-      condition: (log_deleted & 1)
+      null_if: (log_deleted & 1)
       whitelisted: false
     log_page:
-      condition: (log_deleted & 1)
+      null_if: (log_deleted & 1)
       whitelisted: false
     log_params:
-      condition: log_deleted
+      null_if: log_deleted
       whitelisted: false
     log_timestamp:
       whitelisted: true
     log_title:
-      condition: (log_deleted & 1)
+      null_if: (log_deleted & 1)
       whitelisted: false
     log_type:
       whitelisted: true
@@ -522,7 +522,7 @@ logging_userindex:
       whitelisted: true
     log_user_text:
       whitelisted: true
-  where: (((log_deleted & 4) = 0) and (log_type <> 'suppress'))
+  include_row_if: (((log_deleted & 4) = 0) and (log_type <> 'suppress'))
 mark_as_helpful:
   columns:
     mah_id:
@@ -556,7 +556,7 @@ oldimage:
     oi_deleted:
       whitelisted: true
     oi_description:
-      condition: (oi_deleted & 2)
+      null_if: (oi_deleted & 2)
       whitelisted: false
     oi_height:
       whitelisted: true
@@ -577,10 +577,10 @@ oldimage:
     oi_timestamp:
       whitelisted: true
     oi_user:
-      condition: (oi_deleted & 4)
+      null_if: (oi_deleted & 4)
       whitelisted: false
     oi_user_text:
-      condition: (oi_deleted & 4)
+      null_if: (oi_deleted & 4)
       whitelisted: false
     oi_width:
       whitelisted: true
@@ -594,7 +594,7 @@ oldimage_userindex:
     oi_deleted:
       whitelisted: true
     oi_description:
-      condition: (oi_deleted & 2)
+      null_if: (oi_deleted & 2)
       whitelisted: false
     oi_height:
       whitelisted: true
@@ -620,13 +620,13 @@ oldimage_userindex:
       whitelisted: true
     oi_width:
       whitelisted: true
-  where: ((oi_deleted & 4) = 0)
+  include_row_if: ((oi_deleted & 4) = 0)
 recentchanges:
   columns:
     rc_bot:
       whitelisted: true
     rc_comment:
-      condition: (rc_deleted & 2)
+      null_if: (rc_deleted & 2)
       whitelisted: false
     rc_cur_id:
       whitelisted: true
@@ -671,10 +671,10 @@ recentchanges:
     rc_type:
       whitelisted: true
     rc_user:
-      condition: (rc_deleted & 4)
+      null_if: (rc_deleted & 4)
       whitelisted: false
     rc_user_text:
-      condition: (rc_deleted & 4)
+      null_if: (rc_deleted & 4)
       whitelisted: false
 recentchanges_userindex:
   table_name: recentchanges
@@ -682,7 +682,7 @@ recentchanges_userindex:
     rc_bot:
       whitelisted: true
     rc_comment:
-      condition: (rc_deleted & 2)
+      null_if: (rc_deleted & 2)
       whitelisted: false
     rc_cur_id:
       whitelisted: true
@@ -730,11 +730,11 @@ recentchanges_userindex:
       whitelisted: true
     rc_user_text:
       whitelisted: true
-  where: ((rc_deleted & 4) = 0)
+  include_row_if: ((rc_deleted & 4) = 0)
 revision:
   columns:
     rev_comment:
-      condition: (rev_deleted & 2)
+      null_if: (rev_deleted & 2)
       whitelisted: false
     rev_content_format:
       whitelisted: true
@@ -745,7 +745,7 @@ revision:
     rev_id:
       whitelisted: true
     rev_len:
-      condition: (rev_deleted & 1)
+      null_if: (rev_deleted & 1)
       whitelisted: false
     rev_minor_edit:
       whitelisted: true
@@ -754,24 +754,24 @@ revision:
     rev_parent_id:
       whitelisted: true
     rev_sha1:
-      condition: (rev_deleted & 1)
+      null_if: (rev_deleted & 1)
       whitelisted: false
     rev_text_id:
-      condition: (rev_deleted & 1)
+      null_if: (rev_deleted & 1)
       whitelisted: false
     rev_timestamp:
       whitelisted: true
     rev_user:
-      condition: (rev_deleted & 4)
+      null_if: (rev_deleted & 4)
       whitelisted: false
     rev_user_text:
-      condition: (rev_deleted & 4)
+      null_if: (rev_deleted & 4)
       whitelisted: false
 revision_userindex:
   table_name: revision
   columns:
     rev_comment:
-      condition: (rev_deleted & 2)
+      null_if: (rev_deleted & 2)
       whitelisted: false
     rev_content_format:
       whitelisted: true
@@ -782,7 +782,7 @@ revision_userindex:
     rev_id:
       whitelisted: true
     rev_len:
-      condition: (rev_deleted & 1)
+      null_if: (rev_deleted & 1)
       whitelisted: false
     rev_minor_edit:
       whitelisted: true
@@ -791,10 +791,10 @@ revision_userindex:
     rev_parent_id:
       whitelisted: true
     rev_sha1:
-      condition: (rev_deleted & 1)
+      null_if: (rev_deleted & 1)
       whitelisted: false
     rev_text_id:
-      condition: (rev_deleted & 1)
+      null_if: (rev_deleted & 1)
       whitelisted: false
     rev_timestamp:
       whitelisted: true
@@ -802,7 +802,7 @@ revision_userindex:
       whitelisted: true
     rev_user_text:
       whitelisted: true
-  where: ((rev_deleted & 4) = 0)
+  include_row_if: ((rev_deleted & 4) = 0)
 user:
   columns:
     user_editcount:
@@ -867,4 +867,4 @@ user_properties:
       whitelisted: true
     up_value:
       whitelisted: true
-  where: (up_property in ('disablemail','fancysig','gender','language','nickname','skin','timecorrection','variant'))
+  include_row_if: (up_property in ('disablemail','fancysig','gender','language','nickname','skin','timecorrection','variant'))

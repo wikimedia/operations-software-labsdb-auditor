@@ -24,7 +24,7 @@ class Column(object):
     """
     A column that is potentially conditionally or unconditionally nulled
     """
-    def __init__(self, name, whitelisted=True, condition=None, replacewith=None):
+    def __init__(self, name, whitelisted=True, null_if=None):
         """
         A column in a table that can be whitelisted or conditionally nulled
 
@@ -32,23 +32,22 @@ class Column(object):
 
         :param name: Name of this column
         :param whitelisted: True if the column is whitelisted
-        :param condition: Conditions under which this column is replaced.
-                          Specified as a string that is valid SQL expression
-        :param replacewith: What to replace the column's value with if condition is matched
-                            If set to None with whitelisted = False, implies SQL None
+        :param null_if: Conditions under which this column is nulled.
+                        Specified as a string that is valid SQL expression.
+                        If set to None & whitelisted=False, then nulled all the time
+
         :return:
         """
         self.name = name
         self.whitelisted = whitelisted
-        self.condition = condition
-        self.replacewith = replacewith
+        self.null_if = null_if
 
 
 class Table(object):
-    def __init__(self, name, columns={}, where=None, table_name=None):
+    def __init__(self, name, columns={}, include_row_if=None, table_name=None):
         self.name = name
         self.columns = columns
-        self.where = where
+        self.include_row_if = include_row_if
         self.table_name = table_name if table_name else name
 
     def add_column(self, column):
@@ -60,8 +59,8 @@ class Table(object):
         Convert Table to a minimal dict from which it can be reconstituted
         """
         tabledict = {}
-        if self.where:
-            tabledict['where'] = self.where
+        if self.include_row_if:
+            tabledict['include_row_if'] = self.include_row_if
         if all([c.whitelisted for c in self.columns.values()]):
             # Everything is whitelisted!
             tabledict['columns'] = [c.name for c in self.columns]
@@ -70,10 +69,8 @@ class Table(object):
             for c in self.columns.values():
                 columndict = {}
                 columndict['whitelisted'] = c.whitelisted
-                if c.condition:
-                    columndict['condition'] = c.condition
-                if c.replacewith:
-                    columndict['replacewith'] = c.replacewith
+                if c.null_if:
+                    columndict['null_if'] = c.null_if
                 tabledict['columns'][c.name] = columndict
         if self.table_name != self.name:
             tabledict['table_name'] = self.table_name
@@ -81,7 +78,7 @@ class Table(object):
 
     @classmethod
     def from_dict(cls, tablename, tabledata):
-        table = cls(tablename, {}, tabledata.get('where', None), tabledata.get('table_name', None))
+        table = cls(tablename, {}, tabledata.get('include_row_if', None), tabledata.get('table_name', None))
         if isinstance(tabledata['columns'], list):
             # Whitelisted table
             for colname in tabledata['columns']:
@@ -89,10 +86,7 @@ class Table(object):
         else:
             # Greylisted table!
             for colname, coldata in tabledata['columns'].items():
-                col = Column(colname,
-                             whitelisted=coldata.get('whitelisted'),
-                             condition=coldata.get('condition'),
-                             replacewith=coldata.get('replacewith'))
+                col = Column(colname, coldata.get('whitelisted'), coldata.get('null_if'))
                 table.add_column(col)
         return table
 
