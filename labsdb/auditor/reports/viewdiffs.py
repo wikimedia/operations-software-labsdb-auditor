@@ -100,6 +100,7 @@ sql_definition = "select" + OneOrMore(column_definition)("columns") + \
 # Since a lot of definers are the same, this memoization should speed things up
 cache = {}
 
+
 def _table_from_definer(sql, viewname):
     """
     Build a Table object given a cleaned up SQL statement that defines the view
