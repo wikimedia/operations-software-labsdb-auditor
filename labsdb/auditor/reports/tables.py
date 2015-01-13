@@ -12,9 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 import logging
-import MySQLdb
 
-from auditor.utils import get_tables, diff_iters
+import MySQLdb
+from labsdb.auditor.utils import get_tables, diff_iters
 
 
 def _get_extra_tables(model, conn, dbs):

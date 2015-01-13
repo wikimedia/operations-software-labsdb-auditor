@@ -17,7 +17,7 @@ Contains classes that Model how LabsDB should be
 import yaml
 import os
 
-from utils import diff_iters
+from labsdb.auditor.utils import diff_iters
 
 
 class Column(object):

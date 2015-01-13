@@ -11,13 +11,13 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-import re
 import copy
 import logging
-from pyparsing import OneOrMore, Optional, Word, SkipTo, StringEnd, alphanums
 
+import re
+from pyparsing import OneOrMore, Optional, Word, SkipTo, StringEnd, alphanums
 from auditor.models import Column, Table
-from auditor.utils import get_tables, diff_iters, common_iters
+from labsdb.auditor.utils import get_tables, diff_iters, common_iters
 
 
 def _diff(expected, actual, fields):

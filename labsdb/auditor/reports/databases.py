@@ -13,7 +13,7 @@
 # limitations under the License.
 import re
 
-from auditor.utils import get_databases
+from labsdb.auditor.utils import get_databases
 
 
 def databases_report(config, model, conn):

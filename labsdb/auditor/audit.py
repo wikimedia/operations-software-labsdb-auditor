@@ -27,12 +27,11 @@ be, and simply outputs a dict with its report.
 """
 import argparse
 import logging
+
 import yaml
-
 from runner import ReportRunner
-
 from reports.databases import databases_report
-from reports.tables import extra_tables_report
+from labsdb.auditor.reports.tables import extra_tables_report
 from reports.viewdiffs import views_schema_diff_report
 
 
