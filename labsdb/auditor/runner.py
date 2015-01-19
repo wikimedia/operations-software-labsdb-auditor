@@ -15,15 +15,14 @@ import logging
 import time
 
 import MySQLdb
-from labsdb.auditor.models import Model
 
 
 class ReportRunner(object):
     """
     Runs a set of reports!
     """
-    def __init__(self, config):
-        self.model = Model.from_config(config['tableschema-files'], config['mediawiki-config-path'])
+    def __init__(self, config, model):
+        self.model = model
         self.config = config
         self._reporters = {}
 

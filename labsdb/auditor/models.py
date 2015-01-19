@@ -14,10 +14,6 @@
 """
 Contains classes that Model how LabsDB should be
 """
-import yaml
-import os
-
-from labsdb.auditor.utils import diff_iters
 
 
 class Column(object):
@@ -98,34 +94,7 @@ class Model(object):
         - List of dbs that should exist (list)
         - List of tables that can exist in any db (dict with tablename as key)
     """
-    def __init__(self, dblist, tables):
-        self.private_dbs = dblist
-        self.public_dbs = [db + '_p' for db in dblist]
+    def __init__(self, private_dbs, public_dbs, tables):
+        self.private_dbs = private_dbs
+        self.public_dbs = public_dbs
         self.tables = tables
-
-    @classmethod
-    def from_config(cls, tableschema_files, mwconf_path):
-        """
-        Creates a Model from a given config
-
-        Reads table schema from schema files and sets up appropriate tables.
-        Reads dblists from mediawiki-config repo
-        :param tableschema_files: List of files to read table schema from
-        :param mwconf_path: Path to check out of mediawiki-config repository
-        """
-        tables = {}
-        for ts_path in tableschema_files:
-            with open(ts_path) as ts:
-                tableschema = yaml.load(ts)
-            for tablename, tabledict in tableschema.items():
-                tables[tablename] = Table.from_dict(tablename, tabledict)
-
-        all_dblist_path = os.path.join(mwconf_path, 'all.dblist')
-        private_dblist_path = os.path.join(mwconf_path, 'private.dblist')
-
-        with open(all_dblist_path) as all_file, open(private_dblist_path) as priv_file:
-            all_dbs = [l.strip() for l in all_file.readlines()]
-            priv_dbs = [l.strip() for l in priv_file.readlines()]
-            dbs, _ = diff_iters(all_dbs, priv_dbs)
-
-        return cls(dbs, tables)

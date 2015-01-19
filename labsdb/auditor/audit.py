@@ -27,11 +27,14 @@ be, and simply outputs a dict with its report.
 """
 import argparse
 import logging
+import os
 
 import yaml
 from runner import ReportRunner
 from reports.databases import databases_report
 from labsdb.auditor.reports.tables import extra_tables_report
+from labsdb.auditor.utils import diff_iters
+from labsdb.auditor.models import Model, Table
 from reports.viewdiffs import views_schema_diff_report
 
 
@@ -41,6 +44,8 @@ argparser.add_argument('--config-file-path', help='Path to config file', default
 argparser.add_argument('--output-file-path', help='Path to report output file', default='report.yaml')
 argparser.add_argument('--log-file-path', help='Path to log file', default='audit.log')
 argparser.add_argument('--debug', action='store_true', help='Turn on debug logging')
+argparser.add_argument('--ignore-public-dbs', action='store_true',
+                       help='Ignore public dbs (useful for running against sanitarium)')
 
 args = argparser.parse_args()
 
@@ -53,7 +58,29 @@ logging.basicConfig(filename=args.log_file_path,
                     format='%(asctime)s: %(message)s'
                     )
 
-rr = ReportRunner(config)
+# Load up the model
+tables = {}
+for ts_path in config['tableschema-files']:
+    with open(ts_path) as ts:
+        tableschema = yaml.load(ts)
+    for tablename, tabledict in tableschema.items():
+        tables[tablename] = Table.from_dict(tablename, tabledict)
+
+mwconf_path = config['mediawiki-config-path']
+all_dblist_path = os.path.join(mwconf_path, 'all.dblist')
+private_dblist_path = os.path.join(mwconf_path, 'private.dblist')
+
+with open(all_dblist_path) as all_file, open(private_dblist_path) as priv_file:
+    all_wiki_dbs = [l.strip() for l in all_file.readlines()]
+    priv_wiki_dbs = [l.strip() for l in priv_file.readlines()]
+    dbs, _ = diff_iters(all_wiki_dbs, priv_wiki_dbs)
+
+private_dbs = dbs
+public_dbs = [db + '_p' for db in private_dbs] if not args.ignore_public_dbs else []
+
+model = Model(private_dbs, public_dbs, tables)
+
+rr = ReportRunner(config, model)
 
 rr.register_report(databases_report)
 rr.register_report(extra_tables_report)
