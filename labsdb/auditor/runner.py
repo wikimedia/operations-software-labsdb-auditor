@@ -41,8 +41,12 @@ class ReportRunner(object):
     def run(self):
         all_reports = []
         for host in self.config['hosts']:
+            if ':' in host:
+                hostname, port = host.split(':')
+            else:
+                hostname, port = host, 3306
             logging.info('Generating reports for host %s', host)
-            conn = MySQLdb.connect(host=host, read_default_file='~/.my.cnf')
+            conn = MySQLdb.connect(host=hostname, port=int(port), read_default_file='~/.my.cnf')
 
             host_report = {
                 'host': host,
